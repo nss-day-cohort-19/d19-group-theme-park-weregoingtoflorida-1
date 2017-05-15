@@ -12,9 +12,6 @@
   },
   "author": "Chaz, Eliza, Matt, Nick, Ryan",
   "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
   "homepage": "",
   "devDependencies": {
     "bootstrap": "^3.3.7",
