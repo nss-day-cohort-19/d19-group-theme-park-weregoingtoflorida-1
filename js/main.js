@@ -4,13 +4,15 @@
 //Sidebar toggle function
 console.log("MAIN.JS");
 
-let promise= require("./loader");
+let promise = require("./loader");
+let listeners = require("./listeners");
 let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
 let Sort = require("./objectSort.js");
 let modalWindow = require("../templates/modal-window.hbs");
 
-let mick= $(".mick");
+
+let mick = $(".mick");
 
 /// area objects
 let mstObj={};
@@ -21,15 +23,6 @@ let libertySqure = {};
 let fantasyLand = {};
 let tomorrowLand = {};
 let cindarellasCastle = {};
-
-
-
-
-
-
-
-
-
 
 promise.loadArea().then(data =>{
     mstObj.area= data;
@@ -124,10 +117,4 @@ console.log("error")
     });
 
 });
-console.log(mstObj);
-
-
-
-
-
-
+// console.log(mstObj);
