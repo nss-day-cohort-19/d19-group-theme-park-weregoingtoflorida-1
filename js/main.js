@@ -9,11 +9,13 @@ let listeners = require("./listeners");
 let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
 let Sort = require("./objectSort.js");
-let mstObj = {};
+let modalWindow = require("../templates/modal-window.hbs");
+
 
 let mick = $(".mick");
 
 /// area objects
+let mstObj={};
 let mainStreetUSA = {};
 let adventureLand = {};
 let fronteirLand = {};
@@ -99,13 +101,20 @@ console.log("error")
             cindarellasCastle.attraction.push(element);
         }
     });
+
+    $(".potato").on("click",function(event){
+        console.log(event);
+        var modal_data = {};
+        var target_id = event.currentTarget.value;
+        mstObj.attraction.forEach(function(element){
+            if (element.id === target_id){
+                modal_data = element;
+            }
+        });
+        console.log(modal_data);
+        $("#myModal").html();
+        $("#myModal").html(modalWindow(modal_data));
+    });
+
 });
 // console.log(mstObj);
-
-
-
-
-
-
-
-
