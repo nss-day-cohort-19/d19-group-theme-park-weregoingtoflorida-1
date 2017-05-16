@@ -109,13 +109,12 @@ console.log("error")
         }
     });
 
+    eventTimes.attraction = [];
     mstObj.attraction.forEach(function(element) {
-        if (element.times) {
-            let objName = element.name;
-            eventTimes.objName.push(element);
-        }
+            if (element.times) {
+            eventTimes.attraction.push(element);
+            }
     });
-    console.log("eventTimes", eventTimes);
 
 }
 ).then (() =>{
