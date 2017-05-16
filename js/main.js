@@ -6,7 +6,9 @@ console.log("MAIN.JS");
 
 let promise= require("./loader");
 let Handlebars = require("hbsfy/runtime");
-let mainTemplate = require("../master-template.hbs");
+let mainTemplate = require("../templates/master-template.hbs");
+// let trialTemplate = require("../templates/master-bitching.hbs");
+let tommorowlandTemp = require ("../templates/tommorowland-template.hbs");
 let Sort = require("./objectSort.js");
 let mstObj={};
 
