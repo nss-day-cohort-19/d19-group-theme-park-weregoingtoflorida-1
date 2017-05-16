@@ -4,7 +4,7 @@
 //Sidebar toggle function
 console.log("MAIN.JS");
 
-let promise = require("./loader");
+let promise = require("./attractory");
 let listeners = require("./listeners");
 let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
@@ -58,69 +58,78 @@ console.log("error")
         return v1 === v2;
     }});
     $("#page").append(mainTemplate(mstObj));
+    listeners.areaSelector();
+    // mainStreetUSA.attraction = [];
+    // mstObj.attraction.forEach(function(element) {
+    //     if (element.area_id === 1) {
+    //         mainStreetUSA.attraction.push(element);
+    //     }
+    // });
 
-    mainStreetUSA.attraction = [];
-    mstObj.attraction.forEach(function(element) {
-        if (element.area_id === 1) {
-            mainStreetUSA.attraction.push(element);
-        }
-    });
+    // adventureLand.attraction = [];
+    // mstObj.attraction.forEach(function(element) {
+    //     if (element.area_id === 2) {
+    //         adventureLand.attraction.push(element);
+    //     }
+    // });
 
-    adventureLand.attraction = [];
-    mstObj.attraction.forEach(function(element) {
-        if (element.area_id === 2) {
-            adventureLand.attraction.push(element);
-        }
-    });
+    // fronteirLand.attraction = [];
+    // mstObj.attraction.forEach(function(element) {
+    //     if (element.area_id === 3) {
+    //         fronteirLand.attraction.push(element);
+    //     }
+    // });
 
-    fronteirLand.attraction = [];
-    mstObj.attraction.forEach(function(element) {
-        if (element.area_id === 3) {
-            fronteirLand.attraction.push(element);
-        }
-    });
+    // libertySqure.attraction = [];
+    // mstObj.attraction.forEach(function(element) {
+    //     if (element.area_id === 4) {
+    //         libertySqure.attraction.push(element);
+    //     }
+    // });
 
-    libertySqure.attraction = [];
-    mstObj.attraction.forEach(function(element) {
-        if (element.area_id === 4) {
-            libertySqure.attraction.push(element);
-        }
-    });
+    // fantasyLand.attraction = [];
+    // mstObj.attraction.forEach(function(element) {
+    //     if (element.area_id === 5) {
+    //         fantasyLand.attraction.push(element);
+    //     }
+    // });
 
-    fantasyLand.attraction = [];
-    mstObj.attraction.forEach(function(element) {
-        if (element.area_id === 5) {
-            fantasyLand.attraction.push(element);
-        }
-    });
+    // tomorrowLand.attraction = [];
+    // mstObj.attraction.forEach(function(element) {
+    //     if (element.area_id === 6) {
+    //        tomorrowLand.attraction.push(element);
+    //     }
+    // });
 
-    tomorrowLand.attraction = [];
-    mstObj.attraction.forEach(function(element) {
-        if (element.area_id === 6) {
-           tomorrowLand.attraction.push(element);
-        }
-    });
+    // cindarellasCastle.attraction = [];
+    // mstObj.attraction.forEach(function(element) {
+    //     if (element.area_id === 7) {
+    //         cindarellasCastle.attraction.push(element);
+    //     }
+    // });
 
-    cindarellasCastle.attraction = [];
-    mstObj.attraction.forEach(function(element) {
-        if (element.area_id === 7) {
-            cindarellasCastle.attraction.push(element);
-        }
-    });
 
-    $(".potato").on("click",function(event){
-        console.log(event);
-        var modal_data = {};
-        var target_id = event.currentTarget.value;
-        mstObj.attraction.forEach(function(element){
-            if (element.id === target_id){
-                modal_data = element;
-            }
-        });
-        console.log(modal_data);
-        $("#myModal").html();
-        $("#myModal").html(modalWindow(modal_data));
-    });
+
+
+
+
+
+
+
+
+    // $(".potato").on("click",function(event){
+    //     console.log(event);
+    //     var modal_data = {};
+    //     var target_id = event.currentTarget.value;
+    //     mstObj.attraction.forEach(function(element){
+    //         if (element.id === target_id){
+    //             modal_data = element;
+    //         }
+    //     });
+    //     console.log(modal_data);
+    //     $("#myModal").html();
+    //     $("#myModal").html(modalWindow(modal_data));
+    // });
 
 });
 // console.log(mstObj);
