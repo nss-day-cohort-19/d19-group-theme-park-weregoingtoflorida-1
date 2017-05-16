@@ -2,6 +2,7 @@
 
 let promise = require("./attractory");
 let mainTemplate = require("../templates/master-template.hbs");
+let modalWindow = require("../templates/modal-window.hbs");
 
 
 let adventureLandObj = {};
@@ -28,7 +29,24 @@ adventureLandObj.filter = function(data){
 adventureLandObj.write = function(){
     $("#page").html();
     $("#page").html(mainTemplate(adventureLandObj));
+    adventureLandObj.dropDownEvents();
 
+};
+
+adventureLandObj.dropDownEvents = function(){
+    $(".potato").on("click",function(event){
+        console.log(event);
+        var modal_data = {};
+        var target_id = event.currentTarget.value;
+        adventureLandObj.attraction.forEach(function(element){
+            if (element.id === target_id){
+                modal_data = element;
+            }
+        });
+        console.log(modal_data);
+        $("#myModal").html();
+        $("#myModal").html(modalWindow(modal_data));
+    });
 };
 
 module.exports=adventureLandObj;
