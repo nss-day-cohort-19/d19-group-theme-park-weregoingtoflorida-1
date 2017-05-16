@@ -7,12 +7,13 @@ console.log("MAIN.JS");
 let promise= require("./loader");
 let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../master-template.hbs");
+let Sort = require("./objectSort.js");
 let mstObj={};
 
 
 
 
-$("#page").append(mainTemplate(mstObj));
+
 
 
 
@@ -39,6 +40,11 @@ console.log("error")
       console.log('4');
     },
     console.log('error')
-);
+).then(() =>{
+    Handlebars.registerHelper({eq: function (v1, v2) {
+        return v1 === v2;
+    }});
+    $("#page").append(mainTemplate(mstObj));
+});
 console.log(mstObj);
 
