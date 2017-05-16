@@ -11,7 +11,7 @@ let Sort = require("./objectSort.js");
 let mstObj={};
 
 let mick= $(".mickey");
-let ride= $(".dropdown-toggle");
+
 /// area objects
 let mainStreetUSA = {};
 let adventureLand = {};
@@ -20,14 +20,6 @@ let libertySqure = {};
 let fantasyLand = {};
 let tomorrowLand = {};
 let cindarellasCastle = {};
-
-// ride.on('click', () =>{
-//     if(ride.val("Pirates of the Caribbean")){
-
-//     }
-// });
-
-
 
 
 
