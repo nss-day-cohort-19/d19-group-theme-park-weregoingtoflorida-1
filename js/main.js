@@ -4,15 +4,18 @@
 //Sidebar toggle function
 console.log("MAIN.JS");
 
-let promise= require("./loader");
+let promise = require("./loader");
+let listeners = require("./listeners");
 let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
 let Sort = require("./objectSort.js");
-let mstObj={};
+let modalWindow = require("../templates/modal-window.hbs");
 
-let mick= $(".mick");
+
+let mick = $(".mick");
 
 /// area objects
+let mstObj={};
 let mainStreetUSA = {};
 let adventureLand = {};
 let fronteirLand = {};
@@ -20,15 +23,6 @@ let libertySqure = {};
 let fantasyLand = {};
 let tomorrowLand = {};
 let cindarellasCastle = {};
-
-
-
-
-
-
-
-
-
 
 promise.loadArea().then(data =>{
     mstObj.area= data;
@@ -108,11 +102,19 @@ console.log("error")
         }
     });
 
+    $(".potato").on("click",function(event){
+        console.log(event);
+        var modal_data = {};
+        var target_id = event.currentTarget.value;
+        mstObj.attraction.forEach(function(element){
+            if (element.id === target_id){
+                modal_data = element;
+            }
+        });
+        console.log(modal_data);
+        $("#myModal").html();
+        $("#myModal").html(modalWindow(modal_data));
+    });
+
 });
-console.log(mstObj);
-
-
-
-
-
-
+// console.log(mstObj);
