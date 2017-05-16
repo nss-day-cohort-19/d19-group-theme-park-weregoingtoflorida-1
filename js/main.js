@@ -10,7 +10,7 @@ let mainTemplate = require("../templates/master-template.hbs");
 let tommorowlandTemp = require ("../templates/tommorowland-template.hbs");
 let Sort = require("./objectSort.js");
 let mstObj={};
-
+let mick= $(".mick");
 
 
 
