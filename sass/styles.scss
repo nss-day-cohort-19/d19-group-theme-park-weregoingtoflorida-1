@@ -1,6 +1,16 @@
 @import '_sidebar';
 
+.mickey{
+	max-width: 23px;
+	margin-left: -8px;
+}
+
 #clock {
     height: 50px;
 }
+
+#page-content-wrapper {
+    display: inline-block;
+}
+
 
