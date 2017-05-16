@@ -20,6 +20,7 @@ let libertySqure = {};
 let fantasyLand = {};
 let tomorrowLand = {};
 let cindarellasCastle = {};
+let eventTimes = {};
 
 
 
@@ -108,8 +109,26 @@ console.log("error")
         }
     });
 
+    mstObj.attraction.forEach(function(element) {
+        if (element.times) {
+            let objName = element.name;
+            eventTimes.objName.push(element);
+        }
+    });
+    console.log("eventTimes", eventTimes);
+
+}
+).then (() =>{
+    console.log('hey guys');
+    var d = new Date();
+    var hoursNow = d.getHours();
+    var minutesNow = d.getMinutes();
+    var timeNow = `${hoursNow}:${minutesNow}`;
+    $("#timeNow").html(timeNow);
 });
 console.log(mstObj);
+
+
 
 
 
