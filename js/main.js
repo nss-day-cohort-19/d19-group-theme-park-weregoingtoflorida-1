@@ -1,7 +1,21 @@
 "use strict";
+
+
+//Sidebar toggle function
 console.log("MAIN.JS");
+
 let promise= require("./loader");
+let Handlebars = require("hbsfy/runtime");
+let mainTemplate = require("../master-template.hbs");
 let mstObj={};
+
+
+
+
+$("#page").append(mainTemplate(mainObj));
+
+
+
 promise.loadArea().then( (data)=>{
     mstObj.area= data;
     console.log('1');
@@ -24,3 +38,4 @@ promise.loadArea().then( (data)=>{
     }
 );
 console.log(mstObj);
+
