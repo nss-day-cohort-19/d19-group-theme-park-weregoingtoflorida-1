@@ -8,6 +8,7 @@ let promise= require("./loader");
 let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
 let Sort = require("./objectSort.js");
+let _ = require("lodash");
 let mstObj={};
 
 let mick= $(".mick");
@@ -20,7 +21,7 @@ let libertySqure = {};
 let fantasyLand = {};
 let tomorrowLand = {};
 let cindarellasCastle = {};
-let eventTimes = {};
+let eventTimes = [];
 
 
 
@@ -109,21 +110,27 @@ console.log("error")
         }
     });
 
-    eventTimes.attraction = [];
     mstObj.attraction.forEach(function(element) {
             if (element.times) {
-            eventTimes.attraction.push(element);
+            eventTimes.push(element);
             }
     });
+    console.log("eventTimes", eventTimes);
 
 }
 ).then (() =>{
-    console.log('hey guys');
     var d = new Date();
     var hoursNow = d.getHours();
     var minutesNow = d.getMinutes();
     var timeNow = `${hoursNow}:${minutesNow}`;
     $("#timeNow").html(timeNow);
+}
+).then ( () =>{
+    eventTimes.forEach(function(element){
+        
+        console.log("element.times", element.times);
+        
+    });
 });
 console.log(mstObj);
 
