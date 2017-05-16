@@ -7,7 +7,6 @@ console.log("MAIN.JS");
 let promise= require("./loader");
 let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
-let tommorowlandTemp = require ("../templates/tommorowland-template.hbs");
 let Sort = require("./objectSort.js");
 let mstObj={};
 /// area objects
@@ -18,6 +17,7 @@ let libertySqure = {};
 let fantasyLand = {};
 let tomorrowLand = {};
 let cindarellasCastle = {};
+
 
 
 
