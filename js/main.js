@@ -9,6 +9,9 @@ let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
 let Sort = require("./objectSort.js");
 let mstObj={};
+
+let mick= $(".mick");
+
 /// area objects
 let mainStreetUSA = {};
 let adventureLand = {};
@@ -17,6 +20,7 @@ let libertySqure = {};
 let fantasyLand = {};
 let tomorrowLand = {};
 let cindarellasCastle = {};
+
 
 
 
