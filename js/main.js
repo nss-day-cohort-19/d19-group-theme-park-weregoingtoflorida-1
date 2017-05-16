@@ -10,6 +10,14 @@ let mainTemplate = require("../templates/master-template.hbs");
 let tommorowlandTemp = require ("../templates/tommorowland-template.hbs");
 let Sort = require("./objectSort.js");
 let mstObj={};
+/// area objects
+let mainStreetUSA = {};
+let adventureLand = {};
+let fronteirLand = {};
+let libertySqure = {};
+let fantasyLand = {};
+let tomorrowLand = {};
+let cindarellasCastle = {};
 
 
 
@@ -46,6 +54,61 @@ console.log("error")
         return v1 === v2;
     }});
     $("#page").append(mainTemplate(mstObj));
+
+    mainStreetUSA.attraction = [];
+    mstObj.attraction.forEach(function(element) {
+        if (element.area_id === 1) {
+            mainStreetUSA.attraction.push(element);
+        }
+    });
+
+    adventureLand.attraction = [];
+    mstObj.attraction.forEach(function(element) {
+        if (element.area_id === 2) {
+            adventureLand.attraction.push(element);
+        }
+    });
+
+    fronteirLand.attraction = [];
+    mstObj.attraction.forEach(function(element) {
+        if (element.area_id === 3) {
+            fronteirLand.attraction.push(element);
+        }
+    });
+
+    libertySqure.attraction = [];
+    mstObj.attraction.forEach(function(element) {
+        if (element.area_id === 4) {
+            libertySqure.attraction.push(element);
+        }
+    });
+
+    fantasyLand.attraction = [];
+    mstObj.attraction.forEach(function(element) {
+        if (element.area_id === 5) {
+            fantasyLand.attraction.push(element);
+        }
+    });
+
+    tomorrowLand.attraction = [];
+    mstObj.attraction.forEach(function(element) {
+        if (element.area_id === 6) {
+           tomorrowLand.attraction.push(element);
+        }
+    });
+
+    cindarellasCastle.attraction = [];
+    mstObj.attraction.forEach(function(element) {
+        if (element.area_id === 7) {
+            cindarellasCastle.attraction.push(element);
+        }
+    });
+
 });
 console.log(mstObj);
+
+
+
+
+
 
