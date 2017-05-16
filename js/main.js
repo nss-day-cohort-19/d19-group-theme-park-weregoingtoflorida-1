@@ -14,10 +14,6 @@ let modalWindow = require("../templates/modal-window.hbs");
 
 let mick= $(".mickey");
 
-
-let mick = $(".mick");
-
-
 /// area objects
 let mstObj={};
 let mainStreetUSA = {};
