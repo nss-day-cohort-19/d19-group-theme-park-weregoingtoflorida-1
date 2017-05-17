@@ -99,7 +99,7 @@ let mainLoad = function() {
         $("#timeNow").html(local);
         // Resetting our events list so that it's not appending events forever on various page clicks.
         while ($("#stickItHere")[0].firstChild) {
-            $("#stickItHere")[0].removeChild($("#sliderEvents")[0].firstChild);
+            $("#stickItHere")[0].removeChild($("#stickItHere")[0].firstChild);
             console.log("children removed");
         }
         // Getting into our firebase data times and breaking them up so that I can compare them to the current time in half hour chunks.
@@ -130,7 +130,7 @@ let mainLoad = function() {
                 // appending out events beneath the clock.
                 if (timesCheckTime === checkTime){
                     elementString += `${element.name}<br>${element.times}`;
-                    $("#stickItHere").append(`<a href="#" class="schEvents">${element.name}: ${element.times}</a>`);
+                    $("#stickItHere").append(`<div class="blue">-</div><div>${times}<br>${element.name}</div>`);
                 }
             });
             // console.log("element.times", element.times);
