@@ -24,7 +24,7 @@ slider.cases = () => {
 
                     while ($("#sliderEvents")[0].firstChild) {
                         $("#sliderEvents")[0].removeChild($("#sliderEvents")[0].firstChild);
-                        console.log("children removed");
+                        // console.log("children removed");
                     }
                     splashEventTimes.forEach(function(element){
                         element.times.forEach(function(times){
@@ -51,7 +51,7 @@ slider.cases = () => {
                             // console.log("timesCheckTime", timesCheckTime);
                             if (timesCheckTime === sliderTime){
                                 $("#sliderEvents").append(`<a href="#">${element.name}: ${element.times}</a>`);
-                                console.log("children appended");
+                                // console.log("children appended");
                             }
                         });
                         // console.log("element.times", element.times);

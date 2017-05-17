@@ -91,6 +91,10 @@ let mainLoad = function() {
         console.log("checkTime", checkTime);
         $("#timeNow").html(local);
 
+        while ($("#stickItHere")[0].firstChild) {
+            $("#stickItHere")[0].removeChild($("#sliderEvents")[0].firstChild);
+            console.log("children removed");
+        }
         eventTimes.forEach(function(element){
             element.times.forEach(function(times){
                 var timesHour = times.slice(0, -5);
