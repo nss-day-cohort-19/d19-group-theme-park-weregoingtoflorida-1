@@ -67,8 +67,8 @@ let mainLoad = function() {
                 eventTimes.push(element);
                 }
         });
+
         // Get Clock for current time
-        console.log("eventTimes", eventTimes);
         var d = new Date();
         var local = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             // Splitting current time into hours and minutes so I can put it back together and match it to the way times look in our firebase data in half hour chunks.
@@ -89,17 +89,21 @@ let mainLoad = function() {
                 minute = 30;
                 break;
         }
+
+        //Am or Pm
         var M = local.slice(-2);
-        console.log("M", M);
+
+        //Puts back together so we can compare with time in database
         var checkTime = hour + ":" + minute + M;
-        console.log("checkTime", checkTime);
+
             // Posting local time
         $("#timeNow").html(local);
+
         // Resetting our events list so that it's not appending events forever on various page clicks.
         while ($("#stickItHere")[0].firstChild) {
             $("#stickItHere")[0].removeChild($("#sliderEvents")[0].firstChild);
-            console.log("children removed");
         }
+
         // Getting into our firebase data times and breaking them up so that I can compare them to the current time in half hour chunks.
         eventTimes.forEach(function(element){
             element.times.forEach(function(times){
@@ -123,18 +127,14 @@ let mainLoad = function() {
                 }
                 var timesM = times.slice(-2);
                 var timesCheckTime = timesHour + ":" + timesMinute + timesM;
-                // console.log("timesCheckTime", timesCheckTime);
-                var elementString = "";
+
                 // appending out events beneath the clock.
                 if (timesCheckTime === checkTime){
-                    elementString += `${element.name}<br>${element.times}`;
                     $("#stickItHere").append(`<a href="#" class="schEvents">${element.name}: ${element.times}</a>`);
                 }
             });
-            // console.log("element.times", element.times);
-
         });
-        console.log("2");
+
         // Slider events, checkout slidercases.js for this stuff.
         slider.cases();
         $("#ticker").change(slider.cases);
@@ -143,12 +143,10 @@ let mainLoad = function() {
 
 let mickeyBack = function() {
     $('.mickey').click(() => {
-        console.log("mickey click");
-
-        // $("#page").html('');
         mainLoad();
         $(document.body).css("background-color", "white");
     });
+
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
