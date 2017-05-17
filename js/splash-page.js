@@ -156,8 +156,14 @@ let mainLoad = function() {
 let mickeyBack = function() {
     $('.mickey').click(() => {
         console.log("mickey click");
+
         // $("#page").html('');
         mainLoad();
+        $(document.body).css("background-color", "white");
+    });
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
     });
 };
 
