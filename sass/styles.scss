@@ -5,12 +5,21 @@
 	margin-left: -8px;
 }
 
+.main-header {
+	display: inline-block;
+}
+
 #clock {
     height: 50px;
 }
 
 #page-content-wrapper {
     display: inline-block;
+}
+
+#ticker {
+	width: 80%;
+	margin: 0 auto;
 }
 
 .magic{
