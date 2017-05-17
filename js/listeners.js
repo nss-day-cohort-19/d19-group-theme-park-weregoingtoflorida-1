@@ -73,8 +73,65 @@ var dropDownEvents = function(){
         $("#myModal").html(modalWindow(modal_data));
     });
 };
+var frontier= function(){
+    $("#frontier").on('click', (event)=>{
+        event.preventDefault();
+        console.log('test');
+        frontierLand.call();
+        dropDownEvents();
+    });
+};
+var fantasy= function(){
+    $("#fantasy").on('click', (event)=>{
+        event.preventDefault();
+        console.log('test');
+        fantasyLand.call();
+        dropDownEvents();
+    });
+};
+var cinder= function(){
+    $("#cinder").on('click', (event)=>{
+        event.preventDefault();
+        console.log('test');
+        cindys.call();
+        dropDownEvents();
+    });
+};
+var tomorrow= function(){
+    $("#tomorrow").on('click', (event)=>{
+        event.preventDefault();
+        console.log('test');
+        tomorrowLand.call();
+        dropDownEvents();
+    });
+};
+var adventure= function(){
+    $("#adventure").on('click', (event)=>{
+        event.preventDefault();
+        console.log('test');
+        adventureLand.call();
+        dropDownEvents();
+    });
+};
+var mainstreet= function(){
+    $("#mainstreet").on('click', (event)=>{
+        event.preventDefault();
+        console.log('test');
+        mainStUSA.call();
+        dropDownEvents();
+    });
+};
+var liberty= function(){
+    $("#liberty").on('click', (event)=>{
+        event.preventDefault();
+        console.log('test');
+        libertySquare.call();
+        dropDownEvents();
+    });
+};
 
-module.exports = {areaSelector, dropDownEvents};
+
+module.exports = {areaSelector, dropDownEvents, frontier,liberty,mainstreet,adventure,tomorrow,fantasy,cinder};
 
 
 

@@ -47,7 +47,13 @@ console.log("error")
     }});
     $("#page").append(mainTemplate(mstObj));
     listeners.areaSelector();
-
+    listeners.frontier();
+    listeners.fantasy();
+    listeners.tomorrow();
+    listeners.adventure();
+    listeners.mainstreet();
+    listeners.liberty();
+    listeners.cinder();
     $(".potato").on("click",function(event){
         console.log(event);
         var modal_data = {};
