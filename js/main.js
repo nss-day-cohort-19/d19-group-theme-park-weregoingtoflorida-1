@@ -16,7 +16,9 @@ let mick= $(".mickey");
 
 /// area objects
 let mstObj={};
+
 let eventTimes = [];
+
 
 
 promise.loadArea().then(data =>{
@@ -49,6 +51,14 @@ console.log("error")
     $("#page").append(mainTemplate(mstObj));
     listeners.areaSelector();
 
+    listeners.frontier();
+    listeners.fantasy();
+    listeners.tomorrow();
+    listeners.adventure();
+    listeners.mainstreet();
+    listeners.liberty();
+    listeners.cinder();
+
     $(".potato").on("click",function(event){
         console.log(event);
         var modal_data = {};
@@ -62,6 +72,7 @@ console.log("error")
         $("#myModal").html();
         $("#myModal").html(modalWindow(modal_data));
     });
+
 
 }
 ).then (() =>{
@@ -156,6 +167,7 @@ console.log("error")
     // $("#ticker").change(function (){
 
     // });
+
 });
 console.log(mstObj);
 
