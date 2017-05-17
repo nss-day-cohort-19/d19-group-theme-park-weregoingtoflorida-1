@@ -83,7 +83,63 @@ var dropDownEvents = function(){
     });
 };
 
-module.exports = {areaSelector, dropDownEvents};
+
+
+function mapSelect() {
+
+    console.log("listeners listening");
+    $('#Map').on("click",(event) => {
+         console.log(event.target);
+       switch (event.target.id) {
+        case 'adventure':
+        console.log("Adventureland");
+        adventureLand.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+        case 'fantasy':
+        console.log("fantasyLand");
+        fantasyLand.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+        case 'frontier':
+        console.log("frontierLand");
+        frontierLand.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+        case "cinder":
+        console.log("Cindys");
+        cindys.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+        case 'tomorrow':
+        console.log("Tomorrowland");
+        tomorrowLand.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+        case 'mainstreet':
+        console.log("Main");
+        mainStUSA.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+        case 'liberty':
+        console.log("Liberty");
+        libertySquare.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+    }
+    });
+}
+
+module.exports = {areaSelector, dropDownEvents, mapSelect};
+
+
 
 
 
