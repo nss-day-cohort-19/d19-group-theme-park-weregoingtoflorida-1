@@ -6,7 +6,7 @@ let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
 let Sort = require("./objectSort.js");
 let modalWindow = require("../templates/modal-window.hbs");
-
+let slider = require("./slidercases");
 
 /// area objects
 let mstObj={};
@@ -123,34 +123,9 @@ let mainLoad = function() {
         // console.log("element.times", element.times);
 
     });
-    console.log("tickervalue", $("#ticker")[0].value);
-    var sliderTime = $("#ticker")[0].value;
-    var sliderHour = sliderTime.slice(0, -2);
-    switch (true){
-        case sliderHour<10:
-            var sliderMinute = sliderTime.slice(1);
-            break;
-        case sliderHour>=10:
-            sliderMinute = sliderTime.slice(2);
-            break;
-    }
-    switch (true){
-        case sliderHour<12:
-            var sliderM = "AM";
-            break;
-        case sliderHour>12:
-            sliderHour = sliderHour - 12;
-            sliderM = "PM";
-    }
-    console.log("sliderHour", sliderHour);
-    console.log("sliderMinute", sliderMinute);
-    var dislpaySliderTime = sliderHour + ":" + sliderMinute + M;
-    console.log("dislpaySliderTime", dislpaySliderTime);
-    console.log("inputValue", $("#inputValue"));
-    $("#inputValue").html(dislpaySliderTime);
-    // $("#ticker").change(function (){
-
-    // });
+    console.log("2");
+    slider.cases();
+    $("#ticker").change(slider.cases);
     });
 };
 let mickeyBack = function() {
