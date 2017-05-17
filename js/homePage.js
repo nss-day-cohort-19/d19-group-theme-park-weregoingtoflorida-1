@@ -2,29 +2,29 @@
 
 let promise = require("./attractory");
 let mainTemplate = require("../templates/master-template.hbs");
+let modalWindow = require("../templates/modal-window.hbs");
+let pageHeader = require("../templates/pageHeader.hbs");
 
 
+let titleData = {};
 let homePageObj = {};
 
 homePageObj.call = function(){
 
-    promise.loadAttraction()
-    .then( data =>{
-        homePageObj.filter(data);
+    promise.loadParkinfo()
+    .then(data =>{
+        titleData = data[0];
+        console.log("home page data", data);
+        homePageObj.writeName();
     });
 };
 
-homePageObj.filter = function(data){
-    console.log("data", data);
-    homePageObj.attraction = [];
-    homePageObj.attraction.push(data);
-    homePageObj.write();
-};
-
-homePageObj.write = function(){
-    $("#page").html();
-    $("#page").html(mainTemplate(homePageObj));
+homePageObj.writeName = function(){
+    $("#page-header").html();
+    $("#page-header").html(pageHeader(titleData));
 
 };
+
+
 
 module.exports=homePageObj;

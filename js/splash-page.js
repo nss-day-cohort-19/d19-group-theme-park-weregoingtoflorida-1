@@ -6,6 +6,8 @@ let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
 let Sort = require("./objectSort.js");
 let modalWindow = require("../templates/modal-window.hbs");
+let homePage = require("./homePage");
+
 
 
 /// area objects
@@ -41,6 +43,7 @@ let mainLoad = function() {
             return v1 === v2;
         }});
         $("#page").html(mainTemplate(mstObj));
+        homePage.call();
         listeners.areaSelector();
 
         $(".potato").on("click",function(event){
