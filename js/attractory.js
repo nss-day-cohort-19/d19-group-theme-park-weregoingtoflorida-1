@@ -6,9 +6,8 @@ let loadArea= () =>{
     return new Promise((resolve, reject)=>{
         $.ajax({
             url: "https://disney-94757.firebaseio.com/areas/.json",
-            success: function(data){     
+            success: function(data){
                 resolve(data);
-                
             }
         });
     });
