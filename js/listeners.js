@@ -73,65 +73,61 @@ var dropDownEvents = function(){
         $("#myModal").html(modalWindow(modal_data));
     });
 };
-var frontier= function(){
-    $("#frontier").on('click', (event)=>{
-        event.preventDefault();
-        console.log('test');
-        frontierLand.call();
-        dropDownEvents();
-    });
-};
-var fantasy= function(){
-    $("#fantasy").on('click', (event)=>{
-        event.preventDefault();
-        console.log('test');
-        fantasyLand.call();
-        dropDownEvents();
-    });
-};
-var cinder= function(){
-    $("#cinder").on('click', (event)=>{
-        event.preventDefault();
-        console.log('test');
-        cindys.call();
-        dropDownEvents();
-    });
-};
-var tomorrow= function(){
-    $("#tomorrow").on('click', (event)=>{
-        event.preventDefault();
-        console.log('test');
-        tomorrowLand.call();
-        dropDownEvents();
-    });
-};
-var adventure= function(){
-    $("#adventure").on('click', (event)=>{
-        event.preventDefault();
-        console.log('test');
+
+
+function mapSelect(data) {
+
+    console.log("listeners listening");
+    $('.park').click((event) => {
+         console.log(event.target.id);
+       switch (event.target.id) {
+        case 'adventure':
+        console.log("Adventureland");
         adventureLand.call();
         dropDownEvents();
-    });
-};
-var mainstreet= function(){
-    $("#mainstreet").on('click', (event)=>{
         event.preventDefault();
-        console.log('test');
+        break;
+        case 'fantasy':
+        console.log("fantasyLand");
+        fantasyLand.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+        case 'frontier':
+        console.log("frontierLand");
+        frontierLand.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+        case "cinder":
+        console.log("Cindys");
+        cindys.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+        case 'tomorrow':
+        console.log("Tomorrowland");
+        tomorrowLand.call();
+        dropDownEvents();
+        event.preventDefault();
+        break;
+        case 'mainstreet':
+        console.log("Main");
         mainStUSA.call();
         dropDownEvents();
-    });
-};
-var liberty= function(){
-    $("#liberty").on('click', (event)=>{
         event.preventDefault();
-        console.log('test');
+        break;
+        case 'Liberty':
+        console.log("Liberty");
         libertySquare.call();
         dropDownEvents();
+        event.preventDefault();
+        break;
+    }
     });
-};
+}
 
-
-module.exports = {areaSelector, dropDownEvents, frontier,liberty,mainstreet,adventure,tomorrow,fantasy,cinder};
+module.exports = {areaSelector, dropDownEvents, mapSelect};
 
 
 
