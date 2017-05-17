@@ -42,7 +42,7 @@ let mainLoad = function() {
         }});
         $("#page").html(mainTemplate(mstObj));
         listeners.areaSelector();
-
+        listeners.mapSelect();
         $(".potato").on("click",function(event){
             console.log(event);
             var modal_data = {};

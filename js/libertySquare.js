@@ -19,7 +19,10 @@ libertySquareObj.filter = function(data){
     console.log("data", data);
     libertySquareObj.attraction = [];
     data.forEach(function(element) {
+
+
         if (element.area_id === 4) {
+
         libertySquareObj.attraction.push(element);
         }
     });
