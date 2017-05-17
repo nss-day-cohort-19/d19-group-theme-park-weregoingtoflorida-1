@@ -5,6 +5,10 @@
 	margin-left: -8px;
 }
 
+.main-header {
+	display: inline-block;
+}
+
 #clock {
     height: 50px;
 }
@@ -13,9 +17,11 @@
     display: inline-block;
 }
 
-#mk{
-	max-width:1200px;
+#ticker {
+	width: 80%;
+	margin: 0 auto;
 }
+
 .magic{
 	max-width:150px;
 	float: right;
