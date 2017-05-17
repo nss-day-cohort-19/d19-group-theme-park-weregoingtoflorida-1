@@ -3,19 +3,26 @@
 let promise = require("./attractory");
 let mainTemplate = require("../templates/master-template.hbs");
 let modalWindow = require("../templates/modal-window.hbs");
+let pageHeader = require("../templates/pageHeader.hbs");
 
 
+let titleData = {};
 let fantasyLandObj = {};
 
 fantasyLandObj.call = function(){
 
     promise.loadAttraction()
     .then( data =>{
-        fantasyLandObj.filter(data);
+        fantasyLandObj.filterAttraction(data);
+    });
+
+    promise.loadArea()
+    .then(data =>{
+        fantasyLandObj.filterArea(data);
     });
 };
 
-fantasyLandObj.filter = function(data){
+fantasyLandObj.filterAttraction = function(data){
     console.log("data", data);
     fantasyLandObj.attraction = [];
     data.forEach(function(element) {
@@ -29,10 +36,26 @@ fantasyLandObj.filter = function(data){
         fantasyLandObj.write();
 };
 
+fantasyLandObj.filterArea = function(data){
+    data.forEach(function(element){
+        if(element.id === 5){
+            titleData = element;
+            console.log("adventureLandElement", titleData);
+        }
+    });
+    fantasyLandObj.writeName();
+};
+
 fantasyLandObj.write = function(){
     $("#page").html();
     $("#page").html(mainTemplate(fantasyLandObj));
     fantasyLandObj.dropDownEvents();
+
+};
+
+fantasyLandObj.writeName = function(){
+    $("#page-header").html();
+    $("#page-header").html(pageHeader(titleData));
 
 };
 

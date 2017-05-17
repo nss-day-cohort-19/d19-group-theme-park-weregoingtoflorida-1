@@ -95,36 +95,42 @@ function mapSelect() {
         console.log("Adventureland");
         adventureLand.call();
         dropDownEvents();
+        colorChange.adventureLand();
         event.preventDefault();
         break;
         case 'fantasy':
         console.log("fantasyLand");
         fantasyLand.call();
         dropDownEvents();
+        colorChange.fantasyLand();
         event.preventDefault();
         break;
         case 'frontier':
         console.log("frontierLand");
         frontierLand.call();
         dropDownEvents();
+        colorChange.frontierLand();
         event.preventDefault();
         break;
         case "cinder":
         console.log("Cindys");
         cindys.call();
         dropDownEvents();
+        colorChange.cindarellasCastle();
         event.preventDefault();
         break;
         case 'tomorrow':
         console.log("Tomorrowland");
         tomorrowLand.call();
         dropDownEvents();
+        colorChange.tomorrowLand();
         event.preventDefault();
         break;
         case 'mainstreet':
         console.log("Main");
         mainStUSA.call();
         dropDownEvents();
+        colorChange.mainStreet();
         event.preventDefault();
         break;
         case 'liberty':
@@ -132,6 +138,7 @@ function mapSelect() {
         libertySquare.call();
         dropDownEvents();
         event.preventDefault();
+        colorChange.libertySquare();
         break;
     }
     });

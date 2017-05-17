@@ -6,7 +6,9 @@ let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
 let Sort = require("./objectSort.js");
 let modalWindow = require("../templates/modal-window.hbs");
+let homePage = require("./homePage");
 let slider = require("./slidercases");
+
 
 /// area objects
 let mstObj={};
@@ -18,29 +20,30 @@ let mainLoad = function() {
         console.log('1');
         return promise.loadAttractiontype();
     },
-    console.log("error")
+    console.log("")
     ).then(data=>{
         mstObj.type= data;
         console.log('2');
         return promise.loadAttraction();
         },
-        console.log('error')
+        console.log('')
     ).then(data=>{
         mstObj.attraction= data;
         console.log('3');
         return promise.loadParkinfo();
         },
-        console.log("error")
+        console.log("")
     ).then(data=>{
           mstObj.park= data;
           console.log('4');
         },
-        console.log('error')
+        console.log('')
     ).then(() =>{
         Handlebars.registerHelper({eq: function (v1, v2) {
             return v1 === v2;
         }});
         $("#page").html(mainTemplate(mstObj));
+        homePage.call();
         listeners.areaSelector();
         listeners.mapSelect();
         $(".potato").on("click",function(event){
