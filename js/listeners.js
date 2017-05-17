@@ -11,6 +11,7 @@ let frontierLand = require("./frontierLand");
 let mstObj = require("./main");
 let modalWindow = require("../templates/modal-window.hbs");
 let colorChange = require("./colorChange");
+let mainTemplate = require("../templates/master-template.hbs");
 // let mainOb = require("./main");
 
 // LOCATION LISTENERS
