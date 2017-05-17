@@ -14,6 +14,7 @@ let slider = require("./slidercases");
 let mstObj={};
 let eventTimes = [];
 
+//Loads all 4 ajax calls and pushes that data to mstObj
 let mainLoad = function() {
     promise.loadArea().then(data =>{
         mstObj.area= data;
@@ -25,29 +26,29 @@ let mainLoad = function() {
         mstObj.type= data;
         console.log('2');
         return promise.loadAttraction();
-        },
-        console.log('')
+        }
     ).then(data=>{
         mstObj.attraction= data;
         console.log('3');
         return promise.loadParkinfo();
-        },
-        console.log("")
+        }
     ).then(data=>{
           mstObj.park= data;
           console.log('4');
-        },
-        console.log('')
+        }
     ).then(() =>{
+        //Helper to let handlebars compare two variables
         Handlebars.registerHelper({eq: function (v1, v2) {
             return v1 === v2;
         }});
+        //loads masObj into our page handlebars template and attaches event listeners
         $("#page").html(mainTemplate(mstObj));
         homePage.call();
         listeners.areaSelector();
         listeners.mapSelect();
+
+        //gets data and calls modal window
         $(".potato").on("click",function(event){
-            console.log(event);
             var modal_data = {};
             var target_id = event.currentTarget.value;
             mstObj.attraction.forEach(function(element){
@@ -55,12 +56,9 @@ let mainLoad = function() {
                     modal_data = element;
                 }
             });
-            console.log(modal_data);
-            $("#myModal").html();
+            // $("#myModal").html();
             $("#myModal").html(modalWindow(modal_data));
         });
-
-
 
     }).then (() =>{
         mstObj.attraction.forEach(function(element) {
