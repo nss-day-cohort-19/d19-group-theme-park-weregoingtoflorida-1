@@ -45,8 +45,10 @@
   <div id="page-content-wrapper">
 
     <div class ="navbar navbar-default">
-      <a href="#" id="menu-toggle"><img src="images/clock-with-white-face.svg" id="clock"></a> 
-      <h1 class="main-header">Magik Kingdum</h1>
+      <a href="#" id="menu-toggle"><img src="images/clock-with-white-face.svg" id="clock"></a>
+      <script id="page-header" type="text/x-handlebars-template">
+      <h1 class="main-header">{{name}}</h1>
+      </script>
 
         <!-- Single button -->
         <div class="btn-group">
@@ -87,6 +89,7 @@
 
 <script src="lib/node_modules/jquery/dist/jquery.js"></script>
 <script src="lib/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="lib/node_modules/handlebars/dist/handlebars.js"></script>
 <script src="dist/app.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 let promise = require("./attractory");
 let mainTemplate = require("../templates/master-template.hbs");
 let modalWindow = require("../templates/modal-window.hbs");
+let titleData = {};
 
 
 let adventureLandObj = {};
