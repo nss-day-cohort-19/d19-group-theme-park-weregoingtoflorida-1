@@ -73,6 +73,7 @@ var dropDownEvents = function(){
         $("#myModal").html(modalWindow(modal_data));
     });
 };
+
 var frontier= function(){
     $("#frontier").on('click', (event)=>{
         event.preventDefault();
@@ -132,6 +133,10 @@ var liberty= function(){
 
 
 module.exports = {areaSelector, dropDownEvents, frontier,liberty,mainstreet,adventure,tomorrow,fantasy,cinder};
+
+
+module.exports = {areaSelector, dropDownEvents};
+
 
 
 

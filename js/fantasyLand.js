@@ -19,7 +19,11 @@ fantasyLandObj.filter = function(data){
     console.log("data", data);
     fantasyLandObj.attraction = [];
     data.forEach(function(element) {
+
         if (element.area_id === 2) {
+
+        if (element.area_id === 5) {
+
         fantasyLandObj.attraction.push(element);
         }
     });
