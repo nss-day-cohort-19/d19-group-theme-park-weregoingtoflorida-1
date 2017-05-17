@@ -4,10 +4,12 @@ let slider = {},
     splash = require('./splash-page');
 
 slider.cases = () => {
+    // slider stuff. Setting the slider variable.
     var sliderNum = $("#ticker")[0].value;
     console.log("sliderNum", sliderNum);
     console.log("hey bob");
     var sliderTime = "";
+    // creating the eventTimes object so I can access that data here.
     let sliderAjax = () => {
         var splashObj = {};
         var splashEventTimes = [];
@@ -20,12 +22,13 @@ slider.cases = () => {
                         splashEventTimes.push(element);
                         }
                     });
-                    console.log("eventTimesSplash", splashEventTimes);
-
+                    // console.log("eventTimesSplash", splashEventTimes);
+                        // Removing children so it doesn't append forever when I append stuff to the slider data.
                     while ($("#sliderEvents")[0].firstChild) {
                         $("#sliderEvents")[0].removeChild($("#sliderEvents")[0].firstChild);
                         // console.log("children removed");
                     }
+                    // Cutting up the times in the data to match the times in the switches.
                     splashEventTimes.forEach(function(element){
                         element.times.forEach(function(times){
                             var timesHour = times.slice(0, -5);
@@ -60,7 +63,7 @@ slider.cases = () => {
                 }
             });
     };
-
+    // Setting the slider number to a time and then putting the time as the HTML beneath the slider.
     switch (sliderNum){
         case "1":
             sliderTime = "8:30AM";
