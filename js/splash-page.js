@@ -1,70 +1,66 @@
 "use strict";
 
-console.log("MAIN.JS");
-
-
 let promise = require("./attractory");
 let listeners = require("./listeners");
 let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
 let Sort = require("./objectSort.js");
-let _ = require("lodash");
 let modalWindow = require("../templates/modal-window.hbs");
 
-let mick= $(".mickey");
 
 /// area objects
 let mstObj={};
 let eventTimes = [];
 
-
-promise.loadArea().then(data =>{
-    mstObj.area= data;
-    console.log('1');
-    return promise.loadAttractiontype();
-},
-console.log("error")
-).then(data=>{
-    mstObj.type= data;
-    console.log('2');
-    return promise.loadAttraction();
-    },
-    console.log('error')
-).then(data=>{
-    mstObj.attraction= data;
-    console.log('3');
-    return promise.loadParkinfo();
+let mainLoad = function() {
+    promise.loadArea().then(data =>{
+        mstObj.area= data;
+        console.log('1');
+        return promise.loadAttractiontype();
     },
     console.log("error")
-).then(data=>{
-      mstObj.park= data;
-      console.log('4');
-    },
-    console.log('error')
-).then(() =>{
-    Handlebars.registerHelper({eq: function (v1, v2) {
-        return v1 === v2;
-    }});
-    $("#page").append(mainTemplate(mstObj));
-    listeners.areaSelector();
-    listeners.mapSelect();
-    $(".potato").on("click",function(event){
-        console.log(event);
-        var modal_data = {};
-        var target_id = event.currentTarget.value;
-        mstObj.attraction.forEach(function(element){
-            if (element.id === target_id){
-                modal_data = element;
-            }
-        });
-        console.log(modal_data);
-        $("#myModal").html();
-        $("#myModal").html(modalWindow(modal_data));
-    });
+    ).then(data=>{
+        mstObj.type= data;
+        console.log('2');
+        return promise.loadAttraction();
+        },
+        console.log('error')
+    ).then(data=>{
+        mstObj.attraction= data;
+        console.log('3');
+        return promise.loadParkinfo();
+        },
+        console.log("error")
+    ).then(data=>{
+          mstObj.park= data;
+          console.log('4');
+        },
+        console.log('error')
+    ).then(() =>{
+        Handlebars.registerHelper({eq: function (v1, v2) {
+            return v1 === v2;
+        }});
+        $("#page").html(mainTemplate(mstObj));
+        listeners.areaSelector();
 
-}
-).then (() =>{
-  
+        $(".potato").on("click",function(event){
+            console.log(event);
+            var modal_data = {};
+            var target_id = event.currentTarget.value;
+            mstObj.attraction.forEach(function(element){
+                if (element.id === target_id){
+                    modal_data = element;
+                }
+            });
+            console.log(modal_data);
+            $("#myModal").html();
+            $("#myModal").html(modalWindow(modal_data));
+        });
+
+
+
+    }).then (() =>{
+
     mstObj.attraction.forEach(function(element) {
             if (element.times) {
             eventTimes.push(element);
@@ -91,7 +87,7 @@ console.log("error")
             break;
     }
     var M = local.slice(-2);
-    console.log("M", M);    
+    console.log("M", M);
     var checkTime = hour + ":" + minute + M;
     console.log("checkTime", checkTime);
     $("#timeNow").html(local);
@@ -125,7 +121,7 @@ console.log("error")
             }
         });
         // console.log("element.times", element.times);
-        
+
     });
     console.log("tickervalue", $("#ticker")[0].value);
     var sliderTime = $("#ticker")[0].value;
@@ -155,11 +151,14 @@ console.log("error")
     // $("#ticker").change(function (){
 
     // });
-});
-console.log(mstObj);
+    });
+};
+let mickeyBack = function() {
+    $('.mickey').click(() => {
+        console.log("mickey click");
+        // $("#page").html('');
+        mainLoad();
+    });
+};
 
-let splash = require('./splash-page');
-
-
-splash.mainLoad();
-splash.mickeyBack();
+module.exports = {mainLoad, mickeyBack};
