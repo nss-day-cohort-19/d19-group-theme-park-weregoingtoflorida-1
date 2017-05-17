@@ -60,74 +60,75 @@ let mainLoad = function() {
 
 
     }).then (() =>{
-
-    mstObj.attraction.forEach(function(element) {
-            if (element.times) {
-            eventTimes.push(element);
-            }
-    });
-    console.log("eventTimes", eventTimes);
-    var d = new Date();
-    var local = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-    var hour = local.slice(0, -6);
-    switch (true){
-        case hour<10:
-            var minute = local.slice(2, -3);
-            break;
-        case hour>=10:
-            minute = local.slice(3, -3);
-            break;
-    }
-    switch (true){
-        case minute < 30:
-            minute = "00";
-            break;
-        case minute >= 30:
-            minute = 30;
-            break;
-    }
-    var M = local.slice(-2);
-    console.log("M", M);
-    var checkTime = hour + ":" + minute + M;
-    console.log("checkTime", checkTime);
-    $("#timeNow").html(local);
-
-    eventTimes.forEach(function(element){
-        element.times.forEach(function(times){
-            var timesHour = times.slice(0, -5);
-            // console.log("timesHour", timesHour);
-            switch (true){
-                case timesHour<10:
-                    var timesMinute = times.slice(2, -2);
-                    break;
-                case timesHour>=10:
-                    timesMinute = times.slice(3, -2);
-                    break;
-            }
-            switch (true){
-                case timesMinute < 30:
-                    timesMinute = "00";
-                    break;
-                case timesMinute >= 30:
-                    timesMinute = 30;
-                    break;
-            }
-            var timesM = times.slice(-2);
-            var timesCheckTime = timesHour + ":" + timesMinute + timesM;
-            // console.log("timesCheckTime", timesCheckTime);
-
-            if (timesCheckTime === checkTime){
-                $("#stickItHere").append(`<a href="#" id="stickItHere">${element.name}: ${element.times}</a>`);
-            }
+        mstObj.attraction.forEach(function(element) {
+                if (element.times) {
+                eventTimes.push(element);
+                }
         });
-        // console.log("element.times", element.times);
+        console.log("eventTimes", eventTimes);
+        var d = new Date();
+        var local = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        var hour = local.slice(0, -6);
+        switch (true){
+            case hour<10:
+                var minute = local.slice(2, -3);
+                break;
+            case hour>=10:
+                minute = local.slice(3, -3);
+                break;
+        }
+        switch (true){
+            case minute < 30:
+                minute = "00";
+                break;
+            case minute >= 30:
+                minute = 30;
+                break;
+        }
+        var M = local.slice(-2);
+        console.log("M", M);
+        var checkTime = hour + ":" + minute + M;
+        console.log("checkTime", checkTime);
+        $("#timeNow").html(local);
 
-    });
-    console.log("2");
-    slider.cases();
-    $("#ticker").change(slider.cases);
+        eventTimes.forEach(function(element){
+            element.times.forEach(function(times){
+                var timesHour = times.slice(0, -5);
+                // console.log("timesHour", timesHour);
+                switch (true){
+                    case timesHour<10:
+                        var timesMinute = times.slice(2, -2);
+                        break;
+                    case timesHour>=10:
+                        timesMinute = times.slice(3, -2);
+                        break;
+                }
+                switch (true){
+                    case timesMinute < 30:
+                        timesMinute = "00";
+                        break;
+                    case timesMinute >= 30:
+                        timesMinute = 30;
+                        break;
+                }
+                var timesM = times.slice(-2);
+                var timesCheckTime = timesHour + ":" + timesMinute + timesM;
+                // console.log("timesCheckTime", timesCheckTime);
+                var elementString = "";
+                if (timesCheckTime === checkTime){
+                    elementString += `${element.name}<br>${element.times}`;
+                    $("#stickItHere").append(`<a href="#" class="schEvents">${element.name}: ${element.times}</a>`);
+                }
+            });
+            // console.log("element.times", element.times);
+
+        });
+        console.log("2");
+        slider.cases();
+        $("#ticker").change(slider.cases);
     });
 };
+
 let mickeyBack = function() {
     $('.mickey').click(() => {
         console.log("mickey click");
