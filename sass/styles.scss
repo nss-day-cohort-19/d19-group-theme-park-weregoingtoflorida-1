@@ -1,5 +1,20 @@
 @import '_sidebar';
 
+
+@mixin mouseFont {
+	font-family: 'Mouse Memoirs', sans-serif;
+}
+
+body{
+	font-family: 'Mouse Memoirs',
+	sans-serif;
+}
+h1 {
+	@include mouseFont;
+	font-size: 6em;
+}
+
+
 .mickey{
 	max-width: 23px;
 	margin-left: -8px;
@@ -16,6 +31,8 @@
 #mk{
 	max-width:1200px;
 }
+
+
 .magic{
 	max-width:150px;
 	float: right;

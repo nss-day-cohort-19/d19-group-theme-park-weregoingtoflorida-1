@@ -10,6 +10,7 @@ let cindys = require('./cindys');
 let frontierLand = require("./frontierLand");
 let mstObj = require("./main");
 let modalWindow = require("../templates/modal-window.hbs");
+let colorChange = require("./colorChange");
 // let mainOb = require("./main");
 
 // LOCATION LISTENERS
@@ -23,36 +24,43 @@ function areaSelector(data) {
         console.log("Adventureland");
         adventureLand.call();
         dropDownEvents();
+        colorChange.adventureLand();
         break;
         case 'Fantasyland':
         console.log("fantasy");
         fantasyLand.call();
         dropDownEvents();
+        colorChange.fantasyLand();
         break;
         case 'Frontierland':
         console.log("frontier");
         frontierLand.call();
         dropDownEvents();
+        colorChange.frontierLand();
         break;
         case "Cinderella's Castle":
         console.log("Cindys");
         cindys.call();
         dropDownEvents();
+        colorChange.cindarellasCastle();
         break;
         case 'Tomorrowland':
         console.log("Tomorrowland");
         tomorrowLand.call();
         dropDownEvents();
+        colorChange.tomorrowLand();
         break;
         case 'Main St. USA':
         console.log("Main");
         mainStUSA.call();
         dropDownEvents();
+        colorChange.mainStreet();
         break;
         case 'Liberty Square':
         console.log("LIberty");
         libertySquare.call();
         dropDownEvents();
+        colorChange.libertySquare();
         break;
     }
     });
