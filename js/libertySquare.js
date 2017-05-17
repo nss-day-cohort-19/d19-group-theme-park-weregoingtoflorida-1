@@ -3,19 +3,26 @@
 let promise = require("./attractory");
 let mainTemplate = require("../templates/master-template.hbs");
 let modalWindow = require("../templates/modal-window.hbs");
+let pageHeader = require("../templates/pageHeader.hbs");
 
 
+let titleData = {};
 let libertySquareObj = {};
 
 libertySquareObj.call = function(){
 
     promise.loadAttraction()
     .then( data =>{
-        libertySquareObj.filter(data);
+        libertySquareObj.filterAttraction(data);
+    });
+
+    promise.loadArea()
+    .then(data =>{
+        libertySquareObj.filterArea(data);
     });
 };
 
-libertySquareObj.filter = function(data){
+libertySquareObj.filterAttraction = function(data){
     console.log("data", data);
     libertySquareObj.attraction = [];
     data.forEach(function(element) {
@@ -26,10 +33,26 @@ libertySquareObj.filter = function(data){
         libertySquareObj.write();
 };
 
+libertySquareObj.filterArea = function(data){
+    data.forEach(function(element){
+        if(element.id === 4){
+            titleData = element;
+            console.log("adventureLandElement", titleData);
+        }
+    });
+    libertySquareObj.writeName();
+};
+
 libertySquareObj.write = function(){
     $("#page").html();
     $("#page").html(mainTemplate(libertySquareObj));
     libertySquareObj.dropDownEvents();
+
+};
+
+libertySquareObj.writeName = function(){
+    $("#page-header").html();
+    $("#page-header").html(pageHeader(titleData));
 
 };
 
