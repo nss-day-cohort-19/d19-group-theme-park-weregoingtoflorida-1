@@ -75,11 +75,11 @@ var dropDownEvents = function(){
 };
 
 
-function mapSelect(data) {
+function mapSelect() {
 
     console.log("listeners listening");
-    $('.park').click((event) => {
-         console.log(event.target.id);
+    $('#Map').on("click",(event) => {
+         console.log(event.target);
        switch (event.target.id) {
         case 'adventure':
         console.log("Adventureland");
@@ -117,7 +117,7 @@ function mapSelect(data) {
         dropDownEvents();
         event.preventDefault();
         break;
-        case 'Liberty':
+        case 'liberty':
         console.log("Liberty");
         libertySquare.call();
         dropDownEvents();
