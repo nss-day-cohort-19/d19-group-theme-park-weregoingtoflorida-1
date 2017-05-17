@@ -45,7 +45,7 @@ let mainLoad = function() {
         $("#page").html(mainTemplate(mstObj));
         homePage.call();
         listeners.areaSelector();
-
+        listeners.mapSelect();
         $(".potato").on("click",function(event){
             console.log(event);
             var modal_data = {};
