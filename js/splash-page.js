@@ -20,24 +20,24 @@ let mainLoad = function() {
         console.log('1');
         return promise.loadAttractiontype();
     },
-    console.log("error")
+    console.log("")
     ).then(data=>{
         mstObj.type= data;
         console.log('2');
         return promise.loadAttraction();
         },
-        console.log('error')
+        console.log('')
     ).then(data=>{
         mstObj.attraction= data;
         console.log('3');
         return promise.loadParkinfo();
         },
-        console.log("error")
+        console.log("")
     ).then(data=>{
           mstObj.park= data;
           console.log('4');
         },
-        console.log('error')
+        console.log('')
     ).then(() =>{
         Handlebars.registerHelper({eq: function (v1, v2) {
             return v1 === v2;
