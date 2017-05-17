@@ -3,19 +3,26 @@
 let promise = require("./attractory");
 let mainTemplate = require("../templates/master-template.hbs");
 let modalWindow = require("../templates/modal-window.hbs");
+let pageHeader = require("../templates/pageHeader.hbs");
 
 
+let titleData = {};
 let cindysObj = {};
 
 cindysObj.call = function(){
 
     promise.loadAttraction()
     .then( data =>{
-        cindysObj.filter(data);
+        cindysObj.filterAttraction(data);
+    });
+
+    promise.loadArea()
+    .then(data =>{
+        cindysObj.filterArea(data);
     });
 };
 
-cindysObj.filter = function(data){
+cindysObj.filterAttraction = function(data){
     console.log("data", data);
     cindysObj.attraction = [];
     data.forEach(function(element) {
@@ -26,10 +33,26 @@ cindysObj.filter = function(data){
         cindysObj.write();
 };
 
+cindysObj.filterArea = function(data){
+    data.forEach(function(element){
+        if(element.id === 7){
+            titleData = element;
+            console.log("adventureLandElement", titleData);
+        }
+    });
+    cindysObj.writeName();
+};
+
 cindysObj.write = function(){
     $("#page").html();
     $("#page").html(mainTemplate(cindysObj));
     cindysObj.dropDownEvents();
+
+};
+
+cindysObj.writeName = function(){
+    $("#page-header").html();
+    $("#page-header").html(pageHeader(titleData));
 
 };
 

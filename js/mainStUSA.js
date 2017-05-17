@@ -3,19 +3,26 @@
 let promise = require("./attractory");
 let mainTemplate = require("../templates/master-template.hbs");
 let modalWindow = require("../templates/modal-window.hbs");
+let pageHeader = require("../templates/pageHeader.hbs");
 
 
+let titleData = {};
 let mainStUSAObj = {};
 
 mainStUSAObj.call = function(){
 
     promise.loadAttraction()
     .then( data =>{
-        mainStUSAObj.filter(data);
+        mainStUSAObj.filterAttraction(data);
+    });
+
+    promise.loadArea()
+    .then(data =>{
+        mainStUSAObj.filterArea(data);
     });
 };
 
-mainStUSAObj.filter = function(data){
+mainStUSAObj.filterAttraction = function(data){
     console.log("data", data);
     mainStUSAObj.attraction = [];
     data.forEach(function(element) {
@@ -26,10 +33,26 @@ mainStUSAObj.filter = function(data){
         mainStUSAObj.write();
 };
 
+mainStUSAObj.filterArea = function(data){
+    data.forEach(function(element){
+        if(element.id === 1){
+            titleData = element;
+            console.log("adventureLandElement", titleData);
+        }
+    });
+    mainStUSAObj.writeName();
+};
+
 mainStUSAObj.write = function(){
     $("#page").html();
     $("#page").html(mainTemplate(mainStUSAObj));
     mainStUSAObj.dropDownEvents();
+
+};
+
+mainStUSAObj.writeName = function(){
+    $("#page-header").html();
+    $("#page-header").html(pageHeader(titleData));
 
 };
 
