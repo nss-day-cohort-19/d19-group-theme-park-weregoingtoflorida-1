@@ -6,7 +6,7 @@ function addToSchedule(event) {
 
     let tempObj = {};
     // console.log("click", event.target);
-    if (event.target.classList.contains('eventList')) {
+    if (event.target.classList.contains('schedule-add')) {
         let innerThings = event.target.innerText;
         tempObj.time = innerThings.slice(0, 6);
         tempObj.event = innerThings.slice(7, event.length);

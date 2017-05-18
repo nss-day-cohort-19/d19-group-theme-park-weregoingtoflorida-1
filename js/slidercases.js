@@ -56,7 +56,9 @@ slider.cases = () => {
                             var timesCheckTime = timesHour + ":" + timesMinute + timesM;
 
                             if (timesCheckTime === sliderTime){
-                                $("#sliderEvents").append(` <a><div class="eventList event-name" value=${element.id}>${times}<br>${element.name}</div></a>`);
+
+                                $("#sliderEvents").append(`<div class="eventList">${times}<br>${element.name}<br><button class="schedule-add btn-xs">Add to Schedule</button></div>`);
+
                             }
                         });
 
