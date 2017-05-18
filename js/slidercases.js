@@ -6,8 +6,6 @@ let slider = {},
 slider.cases = () => {
     // slider stuff. Setting the slider variable.
     var sliderNum = $("#ticker")[0].value;
-    console.log("sliderNum", sliderNum);
-    console.log("hey bob");
     var sliderTime = "";
     // creating the eventTimes object so I can access that data here.
     let sliderAjax = () => {
@@ -22,7 +20,6 @@ slider.cases = () => {
                         splashEventTimes.push(element);
                         }
                     });
-                    // console.log("eventTimesSplash", splashEventTimes);
                         // Removing children so it doesn't append forever when I append stuff to the slider data.
                     console.log("sliderEvents", $("#sliderEvents"));
                     while ($("#sliderEvents")[0].firstChild) {
@@ -52,27 +49,22 @@ slider.cases = () => {
                             }
                             var timesM = times.slice(-2);
                             var timesCheckTime = timesHour + ":" + timesMinute + timesM;
-                            // console.log("timesCheckTime", timesCheckTime);
+
                             if (timesCheckTime === sliderTime){
                                 $("#sliderEvents").append(`<div class="eventList">${times}<br>${element.name}</div>`);
-                                // console.log("children appended");
                             }
                         });
-                        // console.log("element.times", element.times);
-
                     });
                 }
             });
     };
+
     // Setting the slider number to a time and then putting the time as the HTML beneath the slider.
     switch (sliderNum){
         case "1":
             sliderTime = "8:30AM";
-            console.log("sliderNum switch", sliderNum);
-            console.log("sliderTimechange", sliderTime);
             $("#inputValue").html(sliderTime);
             sliderAjax();
-            console.log("case 1");
             break;
         case "2":
             sliderTime = "9:00AM";
@@ -199,7 +191,7 @@ slider.cases = () => {
             $("#inputValue").html(sliderTime);
             sliderAjax();
             break;
-        case sliderNum = "27":
+        case "27":
             sliderTime = "9:30PM";
             $("#inputValue").html(sliderTime);
             sliderAjax();
