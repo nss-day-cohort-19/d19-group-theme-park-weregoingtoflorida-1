@@ -1,7 +1,8 @@
 "use strict";
 
 let slider = {},
-    splash = require('./splash-page');
+    splash = require('./splash-page'),
+    schedule = require('./schedule');
 
 slider.cases = () => {
     // slider stuff. Setting the slider variable.
