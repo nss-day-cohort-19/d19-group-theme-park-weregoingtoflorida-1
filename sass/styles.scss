@@ -60,6 +60,11 @@ h2 {
 	font-size: 1.2em;
 	font-family: $slabo;
 }
+#schedule{
+	position: absolute;
+	bottom: 15px;
+	left: 75px;
+}
 #nav1, #nav2{
 	background-color: $nav-bgcolor;
 }

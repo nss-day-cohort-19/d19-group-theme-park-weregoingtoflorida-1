@@ -96,49 +96,49 @@ function mapSelect() {
         adventureLand.call();
         dropDownEvents();
         colorChange.adventureLand();
-        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
         break;
         case 'fantasy':
         console.log("fantasyLand");
         fantasyLand.call();
         dropDownEvents();
         colorChange.fantasyLand();
-        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
         break;
         case 'frontier':
         console.log("frontierLand");
         frontierLand.call();
         dropDownEvents();
         colorChange.frontierLand();
-        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
         break;
         case "cinder":
         console.log("Cindys");
         cindys.call();
         dropDownEvents();
         colorChange.cindarellasCastle();
-        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
         break;
         case 'tomorrow':
         console.log("Tomorrowland");
         tomorrowLand.call();
         dropDownEvents();
         colorChange.tomorrowLand();
-        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
         break;
         case 'mainstreet':
         console.log("Main");
         mainStUSA.call();
         dropDownEvents();
         colorChange.mainStreet();
-        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
         break;
         case 'liberty':
         console.log("Liberty");
         libertySquare.call();
         dropDownEvents();
-        event.preventDefault();
         colorChange.libertySquare();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
         break;
     }
     });
