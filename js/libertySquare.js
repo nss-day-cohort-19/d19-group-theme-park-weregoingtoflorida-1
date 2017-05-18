@@ -71,6 +71,7 @@ libertySquareObj.changeImg = function() {
          $("#tomImg img").addClass('hide');
          $("#mainImg img").addClass('hide');
          $("#fantImg img").addClass('hide');
+         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 };
 

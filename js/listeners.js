@@ -168,7 +168,6 @@ function mapSelect() {
         event.preventDefault();
         libertySquare.changeImg();
         colorChange.libertySquare();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
         break;
     }
     });
