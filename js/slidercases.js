@@ -54,7 +54,7 @@ slider.cases = () => {
                             var timesCheckTime = timesHour + ":" + timesMinute + timesM;
                             // console.log("timesCheckTime", timesCheckTime);
                             if (timesCheckTime === sliderTime){
-                                $("#sliderEvents").append(`<div class="blue">-</div><div>${times}<br>${element.name}</div>`);
+                                $("#sliderEvents").append(`<div class="eventList">${times}<br>${element.name}</div>`);
                                 // console.log("children appended");
                             }
                         });

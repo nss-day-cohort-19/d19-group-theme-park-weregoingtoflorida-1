@@ -97,11 +97,13 @@ let mainLoad = function() {
         console.log("checkTime", checkTime);
             // Posting local time
         $("#timeNow").html(local);
-        // Resetting our events list so that it's not appending events forever on various page clicks.
+        // Resetting our events list so that it's not appending events forever on various page clicks. I have "heybob" as an id because it makes the console error out, which stops the rest of this function from running when we re-load. For some reason the mickey back function makes this populate the append children under the clock +2x every time we click it. It's bizarre. But since this is the last thing that loads, erroring it out here leaves the rest of the site functioning.
+        console.log("first child", $("#stickItHere")[0].firstChild);
         while ($("#stickItHere")[0].firstChild) {
-            $("#stickItHere")[0].removeChild($("#stickItHere")[0].firstChild);
-            console.log("children removed");
+            $("#stickItHere")[0].removeChild($("#heybob")[0].firstChild);
+            console.log("child removed");
         }
+        console.log("first child", $("#stickItHere")[0].firstChild);
         // Getting into our firebase data times and breaking them up so that I can compare them to the current time in half hour chunks.
         eventTimes.forEach(function(element){
             element.times.forEach(function(times){
@@ -126,11 +128,10 @@ let mainLoad = function() {
                 var timesM = times.slice(-2);
                 var timesCheckTime = timesHour + ":" + timesMinute + timesM;
                 // console.log("timesCheckTime", timesCheckTime);
-                var elementString = "";
                 // appending out events beneath the clock.
                 if (timesCheckTime === checkTime){
-                    elementString += `${element.name}<br>${element.times}`;
-                    $("#stickItHere").append(`<div class="blue">-</div><div>${times}<br>${element.name}</div>`);
+                    $("#stickItHere").append(`<div class="eventList">${times}<br>${element.name}</div>`);
+                    console.log("child appended");
                 }
             });
             // console.log("element.times", element.times);
