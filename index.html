@@ -82,18 +82,21 @@
 
 </div>
 <!-- /#wrapper -->
+<div id="map-wrapper">
+    <img src="images/mk4.png" id="mk" alt="map of disney" usemap="#Map" />
+    <map name="Map" id="Map">
+        <area id="fantasy" class="park" alt="fantasyland" title="fantasy" href="#" shape="rect" coords="602,106,876,291" />
+        <area id="cinder" alt="cinderella" title="cinderella" href="#" shape="rect" coords="658,309,858,414" />
+        <area id="tomorrow" class="park" alt="tomorrowland" title="tomorrowland" href="#" shape="rect" coords="952,645,1337,457" />
+        <area id="mainstreet" class="park" alt="mainstreet" title="mainstreet" href="#" shape="rect" coords="920,889,598,674" />
+        <area id="adventure" class="park" alt="adventureland" title="adventrueland" href="#" shape="rect" coords="383,456,128,682" />
+        <area class="park" alt="frontierland" id="frontier" title="frontierland" href="#" shape="rect" coords="100,405,350,177" />
+        <area id="liberty" class="park" alt="libertysquare" title="libertysquare" href="#" shape="rect" coords="425,287,610,442" />
+    </map>
 
-<img src="images/mk4.png" id="mk" alt="map of disney" usemap="#Map" />
-<map name="Map" id="Map">
-    <area id="fantasy" class="park" alt="fantasyland" title="fantasy" href="#" shape="rect" coords="602,106,876,291" />
-    <area id="cinder" alt="cinderella" title="cinderella" href="#" shape="rect" coords="658,309,858,414" />
-    <area id="tomorrow" class="park" alt="tomorrowland" title="tomorrowland" href="#" shape="rect" coords="952,645,1337,457" />
-    <area id="mainstreet" class="park" alt="mainstreet" title="mainstreet" href="#" shape="rect" coords="920,889,598,674" />
-    <area id="adventure" class="park" alt="adventureland" title="adventrueland" href="#" shape="rect" coords="383,456,128,682" />
-    <area class="park" alt="frontierland" id="frontier" title="frontierland" href="#" shape="rect" coords="100,405,350,177" />
-    <area id="liberty" class="park" alt="libertysquare" title="libertysquare" href="#" shape="rect" coords="425,287,610,442" />
-</map>
+    <canvas id="map-canvas"></canvas>
 
+</div>
 
 
 <!-- Modal -->
