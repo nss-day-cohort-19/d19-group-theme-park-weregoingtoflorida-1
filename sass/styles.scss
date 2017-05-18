@@ -111,9 +111,18 @@ img {
 }
 
 
+
 h2 {
 	font-family: 'Mouse Memoirs';
     text-align: center;
 
+}
+
+
+.eventList:hover {
+    cursor: pointer;
+}
+.smaller-text {
+    font-size: .7em;
 }
 
