@@ -21,6 +21,7 @@ slider.cases = () => {
                         }
                     });
                         // Removing children so it doesn't append forever when I append stuff to the slider data.
+                    console.log("sliderEvents", $("#sliderEvents"));
                     while ($("#sliderEvents")[0].firstChild) {
                         $("#sliderEvents")[0].removeChild($("#sliderEvents")[0].firstChild);
                         // console.log("children removed");
@@ -50,8 +51,7 @@ slider.cases = () => {
                             var timesCheckTime = timesHour + ":" + timesMinute + timesM;
 
                             if (timesCheckTime === sliderTime){
-                                $("#sliderEvents").append(`<a href="#">${element.name}: ${element.times}</a>`);
-
+                                $("#sliderEvents").append(`<div class="eventList">${times}<br>${element.name}</div>`);
                             }
                         });
                     });
