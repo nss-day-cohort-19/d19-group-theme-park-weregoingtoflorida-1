@@ -12,10 +12,12 @@ let mstObj = require("./main");
 let modalWindow = require("../templates/modal-window.hbs");
 let colorChange = require("./colorChange");
 let mainTemplate = require("../templates/master-template.hbs");
+let canvas = require("./canvas");
+
 // let mainOb = require("./main");
 
 // LOCATION LISTENERS
-function areaSelector(data) {
+var areaSelector = function(data) {
 
     console.log("listeners listening");
     $('.areas').click((event) => {
@@ -63,9 +65,9 @@ function areaSelector(data) {
         dropDownEvents();
         colorChange.libertySquare();
         break;
-    }
+        }
     });
-}
+};
 
 var dropDownEvents = function(){
     $(".potato").on("click",function(event){
@@ -85,14 +87,13 @@ var dropDownEvents = function(){
 
 
 
-function mapSelect() {
+var mapSelect = function() {
 
     console.log("listeners listening");
     $('#Map').on("click",(event) => {
          console.log(event.target);
        switch (event.target.id) {
         case 'adventure':
-        console.log("Adventureland");
         adventureLand.call();
         dropDownEvents();
         colorChange.adventureLand();
@@ -142,7 +143,7 @@ function mapSelect() {
         break;
     }
     });
-}
+};
 
 module.exports = {areaSelector, dropDownEvents, mapSelect};
 

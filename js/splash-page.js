@@ -7,6 +7,7 @@ let mainTemplate = require("../templates/master-template.hbs");
 let modalWindow = require("../templates/modal-window.hbs");
 let homePage = require("./homePage");
 let slider = require("./slidercases");
+let canvas = require("./canvas");
 
 
 /// area objects
@@ -60,6 +61,8 @@ let mainLoad = function() {
         });
 
     }).then (() =>{
+
+        canvas.getCords(mstObj);
         // Create Events Array
         let eventTimes = [];
         mstObj.attraction.forEach(function(element) {
@@ -132,7 +135,7 @@ let mainLoad = function() {
 
                 // appending our events beneath the clock.
                 if (timesCheckTime === checkTime){
-                    $("#stickItHere").append(`<div class="eventList">${times}<br>${element.name}</div>`);
+                    $("#stickItHere").append(`<a><div class="event-name eventList" value=${element.id}>${times}<br>${element.name}</div></a>`);
                 }
             });
         });
@@ -140,6 +143,8 @@ let mainLoad = function() {
         // Slider events, checkout slidercases.js for this stuff.
         slider.cases();
         $("#ticker").change(slider.cases);
+
+
     });
 };
 

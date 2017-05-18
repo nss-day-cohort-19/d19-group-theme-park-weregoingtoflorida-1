@@ -967,7 +967,9 @@
             "description": "Just prior to park opening, you’re invited to make way through Main Street, U.S.A. and down to the front of Cinderella Castle. Soon, the sound of a trumpet fanfare will burst through the morning air, signaling the arrival of a very important procession, a.k.a. the Royal Herald.",
             "times": ["8:55AM"],
             "type_id": 8,
-            "area_id": 7
+            "area_id": 7,
+            "x": 754,
+            "y": 305
         },
         {
             "id": 128,
