@@ -43,6 +43,28 @@ cindysObj.filterArea = function(data){
     cindysObj.writeName();
 };
 
+cindysObj.changeImg = function() {
+    promise.loadArea().then(data => {
+        var loadImg;
+        data.forEach(function(element){
+            if(element.id === 7) {
+                loadImg = 'images/cind.jpg';
+            }
+        });
+        $("#cinImg img").removeClass("hide");
+        $("#cinImg img").hide().attr("src", loadImg).fadeIn(1000);
+         $("#cin").css({"width": "680px", "margin-left": "180px"});
+        $("#mk").addClass("hide");
+         $("#advImg img").addClass('hide');
+         $("#toonImg img").addClass('hide');
+         $("#froImg img").addClass('hide');
+         $("#tomImg img").addClass('hide');
+         $("#libImg img").addClass('hide');
+         $("#mainImg img").addClass('hide');
+         $("#fantImg img").addClass('hide');
+    });
+};
+
 cindysObj.write = function(){
     $("#page").html();
     $("#page").html(mainTemplate(cindysObj));

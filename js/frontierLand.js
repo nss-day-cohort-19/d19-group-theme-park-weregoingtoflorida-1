@@ -49,6 +49,27 @@ frontierLandObj.write = function(){
     frontierLandObj.dropDownEvents();
 
 };
+frontierLandObj.changeImg = function() {
+    promise.loadArea().then(data => {
+        var loadImg;
+        data.forEach(function(element){
+            if(element.id === 3) {
+                loadImg = 'images/frontier2.png';
+            }
+        });
+        $("#froImg img").removeClass("hide");
+        $("#froImg img").hide().attr("src", loadImg).fadeIn(1000);
+         $("#fro").css({"width": "680px", "margin-left": "180px"});
+        $("#mk").addClass("hide");
+         $("#advImg img").addClass('hide');
+         $("#toonImg img").addClass('hide');
+         $("#cinImg img").addClass('hide');
+         $("#tomImg img").addClass('hide');
+         $("#libImg img").addClass('hide');
+         $("#mainImg img").addClass('hide');
+         $("#fantImg img").addClass('hide');
+    });
+};
 
 frontierLandObj.writeName = function(){
     $("#page-header").html();

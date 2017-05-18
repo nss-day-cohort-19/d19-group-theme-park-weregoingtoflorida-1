@@ -145,6 +145,15 @@ let mickeyBack = function() {
     $('.mickey').click(() => {
         mainLoad();
         $(document.body).css("background-color", "white");
+         $("#mk").removeClass("hide");
+         $("#toonImg img").addClass('hide');
+         $("#advImg img").addClass('hide');
+         $("#froImg img").addClass('hide');
+         $("#cinImg img").addClass('hide');
+         $("#tomImg img").addClass('hide');
+         $("#libImg img").addClass('hide');
+         $("#mainImg img").addClass('hide');
+         $("#fantImg img").addClass('hide');
     });
 
     $("#menu-toggle").click(function(e) {

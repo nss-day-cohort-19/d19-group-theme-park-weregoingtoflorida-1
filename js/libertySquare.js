@@ -52,6 +52,27 @@ libertySquareObj.write = function(){
     libertySquareObj.dropDownEvents();
 
 };
+libertySquareObj.changeImg = function() {
+    promise.loadArea().then(data => {
+        var loadImg;
+        data.forEach(function(element){
+            if(element.id === 4) {
+                loadImg = 'images/liberty.jpg';
+            }
+        });
+        $("#libImg img").removeClass("hide");
+        $("#libImg img").hide().attr("src", loadImg).fadeIn(1000);
+         $("#lib").css({"width": "680px", "margin-left": "180px"});
+        $("#mk").addClass("hide");
+        $("#advImg img").addClass('hide');
+        $("#toonImg img").addClass('hide');
+         $("#froImg img").addClass('hide');
+         $("#cinImg img").addClass('hide');
+         $("#tomImg img").addClass('hide');
+         $("#mainImg img").addClass('hide');
+         $("#fantImg img").addClass('hide');
+    });
+};
 
 libertySquareObj.writeName = function(){
     $("#page-header").html();
