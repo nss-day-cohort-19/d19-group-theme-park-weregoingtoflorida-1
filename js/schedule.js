@@ -1,8 +1,5 @@
 "use strict";
 
-
-console.log("schedule.js Bitch");
-
 let modal = require("../templates/schedule-modal.hbs");
 
 function addToSchedule(event) {
@@ -11,8 +8,8 @@ function addToSchedule(event) {
     // console.log("click", event.target);
     if (event.target.classList.contains('eventList')) {
         let innerThings = event.target.innerText;
-        tempObj.time = innerThings.slice(0, 7);
-        tempObj.event = innerThings.slice(8, event.length);
+        tempObj.time = innerThings.slice(0, 6);
+        tempObj.event = innerThings.slice(7, event.length);
 
         $.ajax({
                 url: "https://disney-94757.firebaseio.com/schedule.json",
@@ -21,10 +18,9 @@ function addToSchedule(event) {
             })
             .done(function(response) {
                 console.log("response from Firebase:", response);
+                $('#schedule').trigger('click');
             });
         }
-    // console.log('temp sched', scheduleObj);
-
 }
 
 function viewSchedule() {
