@@ -4,7 +4,6 @@ let promise = require("./attractory");
 let listeners = require("./listeners");
 let Handlebars = require("hbsfy/runtime");
 let mainTemplate = require("../templates/master-template.hbs");
-let Sort = require("./objectSort.js");
 let modalWindow = require("../templates/modal-window.hbs");
 let homePage = require("./homePage");
 let slider = require("./slidercases");
