@@ -11,7 +11,7 @@ let slider = require("./slidercases");
 
 /// area objects
 let mstObj={};
-let eventTimes = [];
+
 
 //Loads all 4 ajax calls and pushes that data to mstObj
 let mainLoad = function() {
@@ -61,6 +61,7 @@ let mainLoad = function() {
 
     }).then (() =>{
         // Create Events Array
+        let eventTimes = [];
         mstObj.attraction.forEach(function(element) {
                 if (element.times) {
                 eventTimes.push(element);
@@ -99,10 +100,12 @@ let mainLoad = function() {
         $("#timeNow").html(local);
 
         // Resetting our events list so that it's not appending events forever on various page clicks.
+        console.log("first child", $("#stickItHere")[0].firstChild);
         while ($("#stickItHere")[0].firstChild) {
-            $("#stickItHere")[0].removeChild($("#sliderEvents")[0].firstChild);
+            $("#stickItHere")[0].removeChild($("#stickItHere")[0].firstChild);
+            // console.log("child removed");
         }
-
+        console.log("first child", $("#stickItHere")[0].firstChild);
         // Getting into our firebase data times and breaking them up so that I can compare them to the current time in half hour chunks.
         eventTimes.forEach(function(element){
             element.times.forEach(function(times){
@@ -127,9 +130,9 @@ let mainLoad = function() {
                 var timesM = times.slice(-2);
                 var timesCheckTime = timesHour + ":" + timesMinute + timesM;
 
-                // appending out events beneath the clock.
+                // appending our events beneath the clock.
                 if (timesCheckTime === checkTime){
-                    $("#stickItHere").append(`<a href="#" class="schEvents">${element.name}: ${element.times}</a>`);
+                    $("#stickItHere").append(`<div class="eventList">${times}<br>${element.name}</div>`);
                 }
             });
         });
