@@ -12,6 +12,7 @@ let mstObj = require("./main");
 let modalWindow = require("../templates/modal-window.hbs");
 let colorChange = require("./colorChange");
 let mainTemplate = require("../templates/master-template.hbs");
+let toonTown= require('./toontown');
 // let mainOb = require("./main");
 
 // LOCATION LISTENERS
@@ -26,42 +27,56 @@ function areaSelector(data) {
         adventureLand.call();
         dropDownEvents();
         colorChange.adventureLand();
+        adventureLand.changeImg();
+        break;
+        case 'Toon Town':
+        console.log("fantasy");
+        toonTown.call();
+        dropDownEvents();
+        colorChange.toonTown();
+        toonTown.changeImg();
         break;
         case 'Fantasyland':
         console.log("fantasy");
         fantasyLand.call();
         dropDownEvents();
         colorChange.fantasyLand();
+        fantasyLand.changeImg();
         break;
         case 'Frontierland':
         console.log("frontier");
         frontierLand.call();
         dropDownEvents();
         colorChange.frontierLand();
+        frontierLand.changeImg();
         break;
         case "Cinderella's Castle":
         console.log("Cindys");
         cindys.call();
         dropDownEvents();
         colorChange.cindarellasCastle();
+        cindys.changeImg();
         break;
         case 'Tomorrowland':
         console.log("Tomorrowland");
         tomorrowLand.call();
         dropDownEvents();
         colorChange.tomorrowLand();
+        tomorrowLand.changeImg();
         break;
         case 'Main St. USA':
         console.log("Main");
         mainStUSA.call();
         dropDownEvents();
         colorChange.mainStreet();
+        mainStUSA.changeImg();
         break;
         case 'Liberty Square':
         console.log("LIberty");
         libertySquare.call();
         dropDownEvents();
         colorChange.libertySquare();
+        libertySquare.changeImg();
         break;
     }
     });
@@ -96,47 +111,62 @@ function mapSelect() {
         adventureLand.call();
         dropDownEvents();
         colorChange.adventureLand();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+        adventureLand.changeImg();
+        event.preventDefault();
+        break;
+        case 'toon':
+        console.log("fantasy");
+        toonTown.call();
+        dropDownEvents();
+        colorChange.toonTown();
+        toonTown.changeImg();
         break;
         case 'fantasy':
         console.log("fantasyLand");
         fantasyLand.call();
         dropDownEvents();
         colorChange.fantasyLand();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+        fantasyLand.changeImg();
+        event.preventDefault();
         break;
         case 'frontier':
         console.log("frontierLand");
         frontierLand.call();
         dropDownEvents();
         colorChange.frontierLand();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+        frontierLand.changeImg();
+        event.preventDefault();
         break;
         case "cinder":
         console.log("Cindys");
         cindys.call();
         dropDownEvents();
         colorChange.cindarellasCastle();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+        cindys.changeImg();
+        event.preventDefault();
         break;
         case 'tomorrow':
         console.log("Tomorrowland");
         tomorrowLand.call();
         dropDownEvents();
         colorChange.tomorrowLand();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+        tomorrowLand.changeImg();
+        event.preventDefault();
         break;
         case 'mainstreet':
         console.log("Main");
         mainStUSA.call();
         dropDownEvents();
         colorChange.mainStreet();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+        mainStUSA.changeImg();
+        event.preventDefault();
         break;
         case 'liberty':
         console.log("Liberty");
         libertySquare.call();
         dropDownEvents();
+        event.preventDefault();
+        libertySquare.changeImg();
         colorChange.libertySquare();
         $("html, body").animate({ scrollTop: 0 }, "slow");
         break;
@@ -144,7 +174,27 @@ function mapSelect() {
     });
 }
 
-module.exports = {areaSelector, dropDownEvents, mapSelect};
+function mapHover(){
+     $('#Map').on("mouseover",(event) => {
+         console.log(event.target);
+       switch (event.target.id) {
+        case 'adventure':
+        console.log("Adventureland");
+        adventureLand.hoverOver();
+        break;
+        case 'frontier':
+        console.log("frontierLand");
+        adventureLand.hoverOver();
+        break;
+        case 'fantasy':
+        console.log("fantasyLand");
+        fantasyLand.hoverOver();
+        break;
+    }
+    });
+}
+
+module.exports = {areaSelector, dropDownEvents, mapSelect, mapHover};
 
 
 
