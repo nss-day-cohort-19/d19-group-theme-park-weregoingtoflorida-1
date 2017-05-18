@@ -30,14 +30,30 @@
     height: 100%;
     margin-left: -300px;
     overflow-y: auto;
-    background: #B4D3EF;
+    background: #E2F6F9;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     font-size: 1.25em;
-    font-family: Georgia;
+    font-family: 'Slabo 27px', serif;
     text-align: center;
+}
+
+// #bs-example-navbar-collapse-1{
+//     width: 750px;
+//     padding-left: calc(50% - 350px);
+//     padding-right: 0;
+//     margin: 0;
+// }
+
+#menu-toggle {
+    display: inline-block;
+    // margin: 0 0 5% 10px;
+}
+
+#menu-toggle:hover, .mickey:hover {
+    cursor: pointer;
 }
 
 .eventList{
