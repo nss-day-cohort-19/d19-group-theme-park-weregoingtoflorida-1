@@ -43,6 +43,28 @@ mainStUSAObj.filterArea = function(data){
     mainStUSAObj.writeName();
 };
 
+mainStUSAObj.changeImg = function() {
+    promise.loadArea().then(data => {
+        var loadImg;
+        data.forEach(function(element){
+            if(element.id === 1) {
+                loadImg = 'images/mainstreet2.png';
+            }
+        });
+        $("#mainImg img").removeClass("hide");
+        $("#mainImg img").hide().attr("src", loadImg).fadeIn(1000);
+         $("#main").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
+        $("#mk").addClass("hide");
+        $("#advImg img").addClass('hide');
+        $("#toonImg img").addClass('hide');
+         $("#froImg img").addClass('hide');
+         $("#cinImg img").addClass('hide');
+         $("#tomImg img").addClass('hide');
+         $("#libImg img").addClass('hide');
+         $("#fantImg img").addClass('hide');
+    });
+};
+
 mainStUSAObj.write = function(){
     $("#page").html();
     $("#page").html(mainTemplate(mainStUSAObj));

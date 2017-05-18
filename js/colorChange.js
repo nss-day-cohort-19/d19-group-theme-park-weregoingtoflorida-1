@@ -89,5 +89,17 @@ colorChange.cindarellasCastle = function() {
 		$("#nav1").css("background-color", colorBackground);
 	});
 };
+colorChange.toonTown = function() {
+	promises.loadArea().then(data => {
+		var colorBackground = "";
+		data.forEach(function(element){
+			if(element.id === 8) {
+				colorBackground = element.colorTheme;
+			}
+		});
+		$(document.body).css("background-color", colorBackground);
+		console.log("colorBackground",colorBackground);
+	});
+};
 
 module.exports = colorChange;

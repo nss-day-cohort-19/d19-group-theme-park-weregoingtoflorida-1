@@ -91,10 +91,15 @@ img {
 	margin-left: 90px;
 }
 
+
+.hover{
+	opacity: 0.6;
+}
 // Styles for time ticker
 #ticker {
 	width: 80%;
 	margin: 0 auto;
+
 }
 
 #timeNow, #inputValue{
@@ -106,9 +111,19 @@ img {
     border-radius: 15px;
 }
 
+
+
+h2 {
+	font-family: 'Mouse Memoirs';
+    text-align: center;
+
+}
+
+
 .eventList:hover {
     cursor: pointer;
 }
 .smaller-text {
     font-size: .7em;
 }
+
