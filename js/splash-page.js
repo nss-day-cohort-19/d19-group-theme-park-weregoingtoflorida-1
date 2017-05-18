@@ -7,7 +7,11 @@ let mainTemplate = require("../templates/master-template.hbs");
 let modalWindow = require("../templates/modal-window.hbs");
 let homePage = require("./homePage");
 let slider = require("./slidercases");
+<<<<<<< HEAD
 let canvas = require("./canvas");
+=======
+let schedule = require('./schedule');
+>>>>>>> master
 
 
 /// area objects
@@ -143,7 +147,8 @@ let mainLoad = function() {
         // Slider events, checkout slidercases.js for this stuff.
         slider.cases();
         $("#ticker").change(slider.cases);
-
+        $('.sidebar-nav').click(schedule.addToSchedule);
+        $('#schedule').click(schedule.viewSchedule);
 
     });
 };
