@@ -62,6 +62,7 @@ mainStUSAObj.changeImg = function() {
          $("#tomImg img").addClass('hide');
          $("#libImg img").addClass('hide');
          $("#fantImg img").addClass('hide');
+         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 };
 
