@@ -98,7 +98,7 @@ let mainLoad = function() {
         console.log("checkTime", checkTime);
             // Posting local time
         $("#timeNow").html(local);
-        // Resetting our events list so that it's not appending events forever on various page clicks. I have "heybob" as an id because it makes the console error out, which stops the rest of this function from running when we re-load. For some reason the mickey back function makes this populate the append children under the clock +2x every time we click it. It's bizarre. But since this is the last thing that loads, erroring it out here leaves the rest of the site functioning.
+        // Resetting our events list so that it's not appending events forever on various page clicks.
         console.log("first child", $("#stickItHere")[0].firstChild);
         while ($("#stickItHere")[0].firstChild) {
             $("#stickItHere")[0].removeChild($("#stickItHere")[0].firstChild);
