@@ -173,7 +173,27 @@ function mapSelect() {
     });
 }
 
-module.exports = {areaSelector, dropDownEvents, mapSelect};
+function mapHover(){
+     $('#Map').on("mouseover",(event) => {
+         console.log(event.target);
+       switch (event.target.id) {
+        case 'adventure':
+        console.log("Adventureland");
+        adventureLand.hoverOver();
+        break;
+        case 'frontier':
+        console.log("frontierLand");
+        adventureLand.hoverOver();
+        break;
+        case 'fantasy':
+        console.log("fantasyLand");
+        fantasyLand.hoverOver();
+        break;
+    }
+    });
+}
+
+module.exports = {areaSelector, dropDownEvents, mapSelect, mapHover};
 
 
 

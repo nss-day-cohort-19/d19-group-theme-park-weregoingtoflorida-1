@@ -53,7 +53,7 @@ mainStUSAObj.changeImg = function() {
         });
         $("#mainImg img").removeClass("hide");
         $("#mainImg img").hide().attr("src", loadImg).fadeIn(1000);
-         $("#main").css({"width": "680px", "margin-left": "180px"});
+         $("#main").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
         $("#mk").addClass("hide");
         $("#advImg img").addClass('hide');
         $("#toonImg img").addClass('hide');

@@ -53,7 +53,7 @@ tomorrowLandObj.changeImg = function() {
         });
         $("#tomImg img").removeClass("hide");
         $("#tomImg img").hide().attr("src", loadImg).fadeIn(1000);
-         $("#tom").css({"width": "680px", "margin-left": "180px"});
+         $("#tom").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
         $("#mk").addClass("hide");
         $("#advImg img").addClass('hide');
         $("#toonImg img").addClass('hide');

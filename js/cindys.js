@@ -53,7 +53,7 @@ cindysObj.changeImg = function() {
         });
         $("#cinImg img").removeClass("hide");
         $("#cinImg img").hide().attr("src", loadImg).fadeIn(1000);
-         $("#cin").css({"width": "680px", "margin-left": "180px"});
+         $("#cin").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
         $("#mk").addClass("hide");
          $("#advImg img").addClass('hide');
          $("#toonImg img").addClass('hide');

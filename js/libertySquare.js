@@ -62,7 +62,7 @@ libertySquareObj.changeImg = function() {
         });
         $("#libImg img").removeClass("hide");
         $("#libImg img").hide().attr("src", loadImg).fadeIn(1000);
-         $("#lib").css({"width": "680px", "margin-left": "180px"});
+         $("#lib").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
         $("#mk").addClass("hide");
         $("#advImg img").addClass('hide');
         $("#toonImg img").addClass('hide');

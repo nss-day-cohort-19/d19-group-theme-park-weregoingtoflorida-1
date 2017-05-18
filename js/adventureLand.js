@@ -52,7 +52,7 @@ adventureLandObj.changeImg = function() {
         });
         $("#advImg img").removeClass("hide");
         $("#advImg img").hide().attr("src", loadImg).fadeIn(1000);
-        $("#adv").css({"width": "680px", "margin-left": "180px"});
+        $("#adv").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
         $("#mk").addClass("hide");
          $("#froImg img").addClass('hide');
          $("#toonImg img").addClass('hide');
@@ -64,6 +64,17 @@ adventureLandObj.changeImg = function() {
     });
 };
 
+adventureLandObj.hoverOver= function(){
+        promise.loadArea().then(data => {
+        var imgOp;
+        data.forEach(function(element){
+            if(element.id === 2) {
+                imgOp = "0.6";
+            }
+        });
+        $("#adventure").addClass("hover");
+    });
+};
 adventureLandObj.write = function(){
     $("#page").html();
     $("#page").html(mainTemplate(adventureLandObj));

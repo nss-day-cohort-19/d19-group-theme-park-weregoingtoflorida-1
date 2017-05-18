@@ -52,7 +52,7 @@ toonTownObj.changeImg = function() {
         });
         $("#toonImg img").removeClass("hide");
         $("#toonImg img").hide().attr("src", loadImg).fadeIn(1000);
-        $("#toon").css({"width": "680px", "margin-left": "180px"});
+        $("#toon").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
         $("#mk").addClass("hide");
         $("#advImg img").addClass('hide');
          $("#froImg img").addClass('hide');

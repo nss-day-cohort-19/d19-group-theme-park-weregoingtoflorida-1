@@ -46,7 +46,7 @@ let mainLoad = function() {
         homePage.call();
         listeners.areaSelector();
         listeners.mapSelect();
-
+        listeners.mapHover();
         //gets data and calls modal window
         $(".potato").on("click",function(event){
             var modal_data = {};
