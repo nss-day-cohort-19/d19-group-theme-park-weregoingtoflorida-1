@@ -3,6 +3,7 @@
 
 $background-color: rgba(131,233,247,.25);
 $nav-bgcolor: rgba(225,225,225,.7);
+$slabo: 'Slabo 27px', serif;
 
 @mixin mouseFont {
 	font-family: 'Mouse Memoirs', sans-serif;
@@ -16,7 +17,7 @@ body{
 
 body::after {
   	content: "";
-  	background-image: url(../images/sparkles3.jpg);
+  	background-image: url(../images/sparkles3.png);
 	background-repeat: repeat-x;
   	opacity: 0.25;
   	top: 0;
@@ -56,6 +57,8 @@ h2 {
 }
 .dropdown{
 	text-align: center;
+	font-size: 1.2em;
+	font-family: $slabo;
 }
 #nav1, #nav2{
 	background-color: $nav-bgcolor;
