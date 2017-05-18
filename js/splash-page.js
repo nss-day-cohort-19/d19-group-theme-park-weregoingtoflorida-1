@@ -7,11 +7,9 @@ let mainTemplate = require("../templates/master-template.hbs");
 let modalWindow = require("../templates/modal-window.hbs");
 let homePage = require("./homePage");
 let slider = require("./slidercases");
-<<<<<<< HEAD
 let canvas = require("./canvas");
-=======
 let schedule = require('./schedule');
->>>>>>> master
+
 
 
 /// area objects
@@ -22,23 +20,19 @@ let mstObj={};
 let mainLoad = function() {
     promise.loadArea().then(data =>{
         mstObj.area= data;
-        console.log('1');
         return promise.loadAttractiontype();
     },
     console.log("")
     ).then(data=>{
         mstObj.type= data;
-        console.log('2');
         return promise.loadAttraction();
         }
     ).then(data=>{
         mstObj.attraction= data;
-        console.log('3');
         return promise.loadParkinfo();
         }
     ).then(data=>{
           mstObj.park= data;
-          console.log('4');
         }
     ).then(() =>{
         //Helper to let handlebars compare two variables
@@ -107,12 +101,10 @@ let mainLoad = function() {
         $("#timeNow").html(local);
 
         // Resetting our events list so that it's not appending events forever on various page clicks.
-        console.log("first child", $("#stickItHere")[0].firstChild);
         while ($("#stickItHere")[0].firstChild) {
             $("#stickItHere")[0].removeChild($("#stickItHere")[0].firstChild);
             // console.log("child removed");
         }
-        console.log("first child", $("#stickItHere")[0].firstChild);
         // Getting into our firebase data times and breaking them up so that I can compare them to the current time in half hour chunks.
         eventTimes.forEach(function(element){
             element.times.forEach(function(times){

@@ -37,7 +37,6 @@ tomorrowLandObj.filterArea = function(data){
     data.forEach(function(element){
         if(element.id === 6){
             titleData = element;
-            console.log("adventureLandElement", titleData);
         }
     });
     tomorrowLandObj.writeName();
@@ -58,7 +57,6 @@ tomorrowLandObj.writeName = function(){
 
 tomorrowLandObj.dropDownEvents = function(){
     $(".potato").on("click",function(event){
-        console.log(event);
         var modal_data = {};
         var target_id = event.currentTarget.value;
         tomorrowLandObj.attraction.forEach(function(element){

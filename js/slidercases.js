@@ -3,7 +3,6 @@
 let slider = {},
 
     canvas = require("./canvas"),
-    splash = require('./splash-page');
     splash = require('./splash-page'),
     schedule = require('./schedule');
 
@@ -27,7 +26,7 @@ slider.cases = () => {
                         }
                     });
                         // Removing children so it doesn't append forever when I append stuff to the slider data.
-                    console.log("sliderEvents", $("#sliderEvents"));
+
                     while ($("#sliderEvents")[0].firstChild) {
                         $("#sliderEvents")[0].removeChild($("#sliderEvents")[0].firstChild);
                         // console.log("children removed");

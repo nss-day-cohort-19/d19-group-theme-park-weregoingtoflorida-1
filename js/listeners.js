@@ -19,48 +19,40 @@ let canvas = require("./canvas");
 // LOCATION LISTENERS
 var areaSelector = function(data) {
 
-    console.log("listeners listening");
     $('.areas').click((event) => {
         // console.log(event);
        switch (event.target.innerText) {
         case 'Adventureland':
-        console.log("Adventureland");
         adventureLand.call();
         dropDownEvents();
         colorChange.adventureLand();
         break;
         case 'Fantasyland':
-        console.log("fantasy");
         fantasyLand.call();
         dropDownEvents();
         colorChange.fantasyLand();
         break;
         case 'Frontierland':
-        console.log("frontier");
         frontierLand.call();
         dropDownEvents();
         colorChange.frontierLand();
         break;
         case "Cinderella's Castle":
-        console.log("Cindys");
         cindys.call();
         dropDownEvents();
         colorChange.cindarellasCastle();
         break;
         case 'Tomorrowland':
-        console.log("Tomorrowland");
         tomorrowLand.call();
         dropDownEvents();
         colorChange.tomorrowLand();
         break;
         case 'Main St. USA':
-        console.log("Main");
         mainStUSA.call();
         dropDownEvents();
         colorChange.mainStreet();
         break;
         case 'Liberty Square':
-        console.log("LIberty");
         libertySquare.call();
         dropDownEvents();
         colorChange.libertySquare();
@@ -71,7 +63,6 @@ var areaSelector = function(data) {
 
 var dropDownEvents = function(){
     $(".potato").on("click",function(event){
-        console.log(event);
         var modal_data = {};
         var target_id = event.currentTarget.value;
         mstObj.attraction.forEach(function(element){
@@ -79,7 +70,6 @@ var dropDownEvents = function(){
                 modal_data = element;
             }
         });
-        console.log(modal_data);
         $("#myModal").html();
         $("#myModal").html(modalWindow(modal_data));
     });
@@ -91,7 +81,6 @@ var mapSelect = function() {
 
     console.log("listeners listening");
     $('#Map').on("click",(event) => {
-         console.log(event.target);
        switch (event.target.id) {
         case 'adventure':
         adventureLand.call();
@@ -100,42 +89,36 @@ var mapSelect = function() {
         event.preventDefault();
         break;
         case 'fantasy':
-        console.log("fantasyLand");
         fantasyLand.call();
         dropDownEvents();
         colorChange.fantasyLand();
         event.preventDefault();
         break;
         case 'frontier':
-        console.log("frontierLand");
         frontierLand.call();
         dropDownEvents();
         colorChange.frontierLand();
         event.preventDefault();
         break;
         case "cinder":
-        console.log("Cindys");
         cindys.call();
         dropDownEvents();
         colorChange.cindarellasCastle();
         event.preventDefault();
         break;
         case 'tomorrow':
-        console.log("Tomorrowland");
         tomorrowLand.call();
         dropDownEvents();
         colorChange.tomorrowLand();
         event.preventDefault();
         break;
         case 'mainstreet':
-        console.log("Main");
         mainStUSA.call();
         dropDownEvents();
         colorChange.mainStreet();
         event.preventDefault();
         break;
         case 'liberty':
-        console.log("Liberty");
         libertySquare.call();
         dropDownEvents();
         event.preventDefault();

@@ -23,7 +23,6 @@ fantasyLandObj.call = function(){
 };
 
 fantasyLandObj.filterAttraction = function(data){
-    console.log("data", data);
     fantasyLandObj.attraction = [];
     data.forEach(function(element) {
 

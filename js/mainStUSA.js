@@ -23,7 +23,6 @@ mainStUSAObj.call = function(){
 };
 
 mainStUSAObj.filterAttraction = function(data){
-    console.log("data", data);
     mainStUSAObj.attraction = [];
     data.forEach(function(element) {
         if (element.area_id === 1) {
