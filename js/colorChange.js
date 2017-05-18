@@ -13,8 +13,9 @@ colorChange.mainStreet = function() {
 				colorBackground = element.colorTheme;
 			}
 		});
-		$(document.body).css("background-color", colorBackground);
-		console.log("colorBackground",colorBackground);
+		$("#nav1").css("background-color", colorBackground);
+		$("#nav2").css("background-color", colorBackground);
+		console.log("colorBackground", colorBackground);
 	});
 };
 
@@ -26,8 +27,7 @@ colorChange.adventureLand = function() {
 				colorBackground = element.colorTheme;
 			}
 		});
-		$(document.body).css("background-color", colorBackground);
-		console.log("colorBackground",colorBackground);
+		$("#nav1").css("background-color", colorBackground);
 	});
 };
 
@@ -39,8 +39,7 @@ colorChange.frontierLand = function() {
 				colorBackground = element.colorTheme;
 			}
 		});
-		$(document.body).css("background-color", colorBackground);
-		console.log("colorBackground",colorBackground);
+		$("#nav1").css("background-color", colorBackground);
 	});
 };
 colorChange.libertySquare = function() {
@@ -51,8 +50,7 @@ colorChange.libertySquare = function() {
 				colorBackground = element.colorTheme;
 			}
 		});
-		$(document.body).css("background-color", colorBackground);
-		console.log("colorBackground",colorBackground);
+		$("#nav1").css("background-color", colorBackground);
 	});
 };
 
@@ -64,8 +62,7 @@ colorChange.fantasyLand = function() {
 				colorBackground = element.colorTheme;
 			}
 		});
-		$(document.body).css("background-color", colorBackground);
-		console.log("colorBackground",colorBackground);
+		$("#nav1").css("background-color", colorBackground);
 	});
 };
 
@@ -77,8 +74,7 @@ colorChange.tomorrowLand = function() {
 				colorBackground = element.colorTheme;
 			}
 		});
-		$(document.body).css("background-color", colorBackground);
-		console.log("colorBackground",colorBackground);
+		$("#nav1").css("background-color", colorBackground);
 	});
 };
 
@@ -90,8 +86,7 @@ colorChange.cindarellasCastle = function() {
 				colorBackground = element.colorTheme;
 			}
 		});
-		$(document.body).css("background-color", colorBackground);
-		console.log("colorBackground",colorBackground);
+		$("#nav1").css("background-color", colorBackground);
 	});
 };
 
