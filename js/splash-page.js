@@ -156,6 +156,9 @@ let mickeyBack = function() {
          $("#libImg img").addClass('hide');
          $("#mainImg img").addClass('hide');
          $("#fantImg img").addClass('hide');
+
+        $("#nav1").css("background-color", "rgba(225,225,225,.7)");
+
     });
 
     $("#menu-toggle").click(function(e) {

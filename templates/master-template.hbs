@@ -6,7 +6,7 @@
 <!-- Page Content -->
 
   <div id="page-content-wrapper">
-        <nav class="navbar navbar-default">
+        <nav id="nav2" class="navbar navbar-default">
           <div class="container-fluid">
             {{!-- <!-- Brand and toggle get grouped for better mobile display --> --}}
             <div class="navbar-header">
@@ -20,10 +20,10 @@
             {{!-- <!-- Collect the nav links, forms, and other content for toggling --> --}}
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-
-              <ul class="nav navbar-nav"> {{!-- Rides Dropdown --}}
+              <ul class="col-md-2 nav navbar-nav"></ul>
+              <ul class="col-md-1 nav navbar-nav"> {{!-- Rides Dropdown --}}
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle ride" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rides <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle ride" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rides</a>
                   <ul class="dropdown-menu">
                       {{#each attraction}}
                       {{#if (eq type_id 1)}}
@@ -41,9 +41,9 @@
 
 
 
-              <ul class="nav navbar-nav"> {{!-- Restaurants Dropdown --}}
+              <ul class="col-md-1 nav navbar-nav"> {{!-- Restaurants Dropdown --}}
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Restaurants <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Restaurants</a>
                   <ul class="dropdown-menu">
                       {{#each attraction}}
                       {{#if (eq type_id 2)}}
@@ -57,9 +57,9 @@
               </ul>
 
 
-              <ul class="nav navbar-nav"> {{!-- Shows Dropdown --}}
+              <ul class="col-md-1 nav navbar-nav"> {{!-- Shows Dropdown --}}
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shows <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shows</a>
                   <ul class="dropdown-menu">
                       {{#each attraction}}
                       {{#if (eq type_id 3)}}
@@ -75,9 +75,9 @@
 
 
 
-              <ul class="nav navbar-nav"> {{!-- Vendor Dropdown --}}
+              <ul class="col-md-1 nav navbar-nav"> {{!-- Vendor Dropdown --}}
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendors <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendors</a>
                   <ul class="dropdown-menu">
                       {{#each attraction}}
                       {{#if (eq type_id 4)}}
@@ -91,9 +91,9 @@
               </ul>
 
 
-              <ul class="nav navbar-nav"> {{!-- Characters Dropdown --}}
+              <ul class="col-md-1 nav navbar-nav"> {{!-- Characters Dropdown --}}
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Characters <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Characters</a>
                   <ul class="dropdown-menu">
                       {{#each attraction}}
                       {{#if (eq type_id 5)}}
@@ -106,9 +106,9 @@
                 </li>
               </ul>
 
-              <ul class="nav navbar-nav"> {{!-- Animals Dropdown --}}
+              <ul class="col-md-1 nav navbar-nav"> {{!-- Animals Dropdown --}}
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Animals <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Animals</a>
                   <ul class="dropdown-menu">
                       {{#each attraction}}
                       {{#if (eq type_id 6)}}
@@ -121,9 +121,9 @@
                 </li>
               </ul>
 
-              <ul class="nav navbar-nav"> {{!-- Games Dropdown --}}
+              <ul class="col-md-1 nav navbar-nav"> {{!-- Games Dropdown --}}
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games</a>
                   <ul class="dropdown-menu">
                       {{#each attraction}}
                       {{#if (eq type_id 7)}}
@@ -136,9 +136,9 @@
                 </li>
               </ul>
 
-              <ul class="nav navbar-nav"> {{!-- Special Events Dropdown --}}
+              <ul class="col-md-2 nav navbar-nav"> {{!-- Special Events Dropdown --}}
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Special Events <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Special Events</a>
                   <ul class="dropdown-menu">
                       {{#each attraction}}
                       {{#if (eq type_id 8)}}
