@@ -102,7 +102,7 @@ let mainLoad = function() {
         console.log("first child", $("#stickItHere")[0].firstChild);
         while ($("#stickItHere")[0].firstChild) {
             $("#stickItHere")[0].removeChild($("#stickItHere")[0].firstChild);
-            console.log("child removed");
+            // console.log("child removed");
         }
         console.log("first child", $("#stickItHere")[0].firstChild);
         // Getting into our firebase data times and breaking them up so that I can compare them to the current time in half hour chunks.
@@ -132,7 +132,7 @@ let mainLoad = function() {
                 // appending out events beneath the clock.
                 if (timesCheckTime === checkTime){
                     $("#stickItHere").append(`<div class="eventList">${times}<br>${element.name}</div>`);
-                    console.log("child appended");
+                    // console.log("child appended");
                 }
             });
             // console.log("element.times", element.times);
