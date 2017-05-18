@@ -133,7 +133,7 @@ let mainLoad = function() {
 
                 // appending our events beneath the clock.
                 if (timesCheckTime === checkTime){
-                    $("#stickItHere").append(`<div class="eventList">${times}<br>${element.name}</div>`);
+                    $("#stickItHere").append(`<div class="eventList">${times}<br>${element.name}<br><button class="schedule-add btn-xs">Add to Schedule</button></div>`);
                 }
             });
         });
