@@ -13,6 +13,7 @@ let modalWindow = require("../templates/modal-window.hbs");
 let colorChange = require("./colorChange");
 let mainTemplate = require("../templates/master-template.hbs");
 let canvas = require("./canvas");
+let toonTown= require('./toontown');
 
 // let mainOb = require("./main");
 
@@ -26,36 +27,50 @@ var areaSelector = function(data) {
         adventureLand.call();
         dropDownEvents();
         colorChange.adventureLand();
+        adventureLand.changeImg();
+        break;
+        case 'Toon Town':
+        console.log("fantasy");
+        toonTown.call();
+        dropDownEvents();
+        colorChange.toonTown();
+        toonTown.changeImg();
         break;
         case 'Fantasyland':
         fantasyLand.call();
         dropDownEvents();
         colorChange.fantasyLand();
+        fantasyLand.changeImg();
         break;
         case 'Frontierland':
         frontierLand.call();
         dropDownEvents();
         colorChange.frontierLand();
+        frontierLand.changeImg();
         break;
         case "Cinderella's Castle":
         cindys.call();
         dropDownEvents();
         colorChange.cindarellasCastle();
+        cindys.changeImg();
         break;
         case 'Tomorrowland':
         tomorrowLand.call();
         dropDownEvents();
         colorChange.tomorrowLand();
+        tomorrowLand.changeImg();
         break;
         case 'Main St. USA':
         mainStUSA.call();
         dropDownEvents();
         colorChange.mainStreet();
+        mainStUSA.changeImg();
         break;
         case 'Liberty Square':
         libertySquare.call();
         dropDownEvents();
         colorChange.libertySquare();
+        libertySquare.changeImg();
         break;
         }
     });
@@ -86,49 +101,83 @@ var mapSelect = function() {
         adventureLand.call();
         dropDownEvents();
         colorChange.adventureLand();
+        adventureLand.changeImg();
         event.preventDefault();
+        break;
+        case 'toon':
+        console.log("fantasy");
+        toonTown.call();
+        dropDownEvents();
+        colorChange.toonTown();
+        toonTown.changeImg();
         break;
         case 'fantasy':
         fantasyLand.call();
         dropDownEvents();
         colorChange.fantasyLand();
+        fantasyLand.changeImg();
         event.preventDefault();
         break;
         case 'frontier':
         frontierLand.call();
         dropDownEvents();
         colorChange.frontierLand();
+        frontierLand.changeImg();
         event.preventDefault();
         break;
         case "cinder":
         cindys.call();
         dropDownEvents();
         colorChange.cindarellasCastle();
+        cindys.changeImg();
         event.preventDefault();
         break;
         case 'tomorrow':
         tomorrowLand.call();
         dropDownEvents();
         colorChange.tomorrowLand();
+        tomorrowLand.changeImg();
         event.preventDefault();
         break;
         case 'mainstreet':
         mainStUSA.call();
         dropDownEvents();
         colorChange.mainStreet();
+        mainStUSA.changeImg();
         event.preventDefault();
         break;
         case 'liberty':
         libertySquare.call();
         dropDownEvents();
         event.preventDefault();
+        libertySquare.changeImg();
         colorChange.libertySquare();
         break;
     }
     });
 };
 
-module.exports = {areaSelector, dropDownEvents, mapSelect};
+function mapHover(){
+     $('#Map').on("mouseover",(event) => {
+         console.log(event.target);
+       switch (event.target.id) {
+        case 'adventure':
+        console.log("Adventureland");
+        adventureLand.hoverOver();
+        break;
+        case 'frontier':
+        console.log("frontierLand");
+        adventureLand.hoverOver();
+        break;
+        case 'fantasy':
+        console.log("fantasyLand");
+        fantasyLand.hoverOver();
+        break;
+    }
+    });
+}
+
+module.exports = {areaSelector, dropDownEvents, mapSelect, mapHover};
 
 
 

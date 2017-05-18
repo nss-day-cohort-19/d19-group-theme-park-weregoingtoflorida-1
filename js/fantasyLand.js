@@ -44,6 +44,39 @@ fantasyLandObj.filterArea = function(data){
     });
     fantasyLandObj.writeName();
 };
+fantasyLandObj.changeImg = function() {
+    promise.loadArea().then(data => {
+        var loadImg;
+        data.forEach(function(element){
+            if(element.id === 5) {
+                loadImg = 'images/fantasy.jpg';
+            }
+        });
+        $("#fantImg img").removeClass("hide");
+        $("#fantImg img").hide().attr("src", loadImg).fadeIn(1000);
+         $("#fant").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
+        $("#mk").addClass("hide");
+        $("#advImg img").addClass('hide');
+        $("#toonImg img").addClass('hide');
+         $("#froImg img").addClass('hide');
+         $("#cinImg img").addClass('hide');
+         $("#tomImg img").addClass('hide');
+         $("#libImg img").addClass('hide');
+         $("#mainImg img").addClass('hide');
+    });
+};
+fantasyLandObj.hoverOver= function(){
+        promise.loadArea().then(data => {
+        var imgOp;
+        data.forEach(function(element){
+            if(element.id === 2) {
+                imgOp = "0.6";
+            }
+        });
+        $("#fantasy").animate({"opacity": "0.6"});
+    });
+
+};
 
 fantasyLandObj.write = function(){
     $("#page").html();

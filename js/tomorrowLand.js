@@ -42,6 +42,27 @@ tomorrowLandObj.filterArea = function(data){
     tomorrowLandObj.writeName();
 };
 
+tomorrowLandObj.changeImg = function() {
+    promise.loadArea().then(data => {
+        var loadImg;
+        data.forEach(function(element){
+            if(element.id === 6) {
+                loadImg = 'images/tomorrow2.png';
+            }
+        });
+        $("#tomImg img").removeClass("hide");
+        $("#tomImg img").hide().attr("src", loadImg).fadeIn(1000);
+         $("#tom").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
+        $("#mk").addClass("hide");
+        $("#advImg img").addClass('hide');
+        $("#toonImg img").addClass('hide');
+         $("#froImg img").addClass('hide');
+         $("#cinImg img").addClass('hide');
+         $("#libImg img").addClass('hide');
+         $("#mainImg img").addClass('hide');
+         $("#fantImg img").addClass('hide');
+    });
+};
 tomorrowLandObj.write = function(){
     $("#page").html();
     $("#page").html(mainTemplate(tomorrowLandObj));

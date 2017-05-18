@@ -7,56 +7,56 @@ let pageHeader = require("../templates/pageHeader.hbs");
 
 
 let titleData = {};
-let cindysObj = {};
+let toonTownObj = {};
 
-cindysObj.call = function(){
+toonTownObj.call = function(){
 
     promise.loadAttraction()
     .then( data =>{
-        cindysObj.filterAttraction(data);
+        toonTownObj.filterAttraction(data);
     });
 
     promise.loadArea()
     .then(data =>{
-        cindysObj.filterArea(data);
+        toonTownObj.filterArea(data);
     });
 };
 
-cindysObj.filterAttraction = function(data){
-    cindysObj.attraction = [];
+toonTownObj.filterAttraction = function(data){
+    console.log("data", data);
+    toonTownObj.attraction = [];
     data.forEach(function(element) {
-        if (element.area_id === 7) {
-        cindysObj.attraction.push(element);
+        if (element.area_id === 8) {
+        toonTownObj.attraction.push(element);
         }
     });
-        cindysObj.write();
+        toonTownObj.write();
 };
 
-cindysObj.filterArea = function(data){
+toonTownObj.filterArea = function(data){
     data.forEach(function(element){
-        if(element.id === 7){
+        if(element.id === 8){
             titleData = element;
             console.log("adventureLandElement", titleData);
         }
     });
-    cindysObj.writeName();
+    toonTownObj.writeName();
 };
-
-cindysObj.changeImg = function() {
+toonTownObj.changeImg = function() {
     promise.loadArea().then(data => {
         var loadImg;
         data.forEach(function(element){
-            if(element.id === 7) {
-                loadImg = 'images/cind.jpg';
+            if(element.id === 8) {
+                loadImg = 'images/toontown.jpeg';
             }
         });
-        $("#cinImg img").removeClass("hide");
-        $("#cinImg img").hide().attr("src", loadImg).fadeIn(1000);
-         $("#cin").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
+        $("#toonImg img").removeClass("hide");
+        $("#toonImg img").hide().attr("src", loadImg).fadeIn(1000);
+        $("#toon").css({"width": "680px", "margin-left": "180px", "border-radius": "70%"});
         $("#mk").addClass("hide");
-         $("#advImg img").addClass('hide');
-         $("#toonImg img").addClass('hide');
+        $("#advImg img").addClass('hide');
          $("#froImg img").addClass('hide');
+         $("#cinImg img").addClass('hide');
          $("#tomImg img").addClass('hide');
          $("#libImg img").addClass('hide');
          $("#mainImg img").addClass('hide');
@@ -64,25 +64,25 @@ cindysObj.changeImg = function() {
     });
 };
 
-cindysObj.write = function(){
+toonTownObj.write = function(){
     $("#page").html();
-    $("#page").html(mainTemplate(cindysObj));
-    cindysObj.dropDownEvents();
+    $("#page").html(mainTemplate(toonTownObj));
+    toonTownObj.dropDownEvents();
 
 };
 
-cindysObj.writeName = function(){
+toonTownObj.writeName = function(){
     $("#page-header").html();
     $("#page-header").html(pageHeader(titleData));
 
 };
 
-cindysObj.dropDownEvents = function(){
+toonTownObj.dropDownEvents = function(){
     $(".potato").on("click",function(event){
         console.log(event);
         var modal_data = {};
         var target_id = event.currentTarget.value;
-        cindysObj.attraction.forEach(function(element){
+        toonTownObj.attraction.forEach(function(element){
             if (element.id === target_id){
                 modal_data = element;
             }
@@ -93,4 +93,4 @@ cindysObj.dropDownEvents = function(){
     });
 };
 
-module.exports=cindysObj;
+module.exports=toonTownObj;

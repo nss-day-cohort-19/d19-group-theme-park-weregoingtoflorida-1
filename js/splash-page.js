@@ -44,7 +44,7 @@ let mainLoad = function() {
         homePage.call();
         listeners.areaSelector();
         listeners.mapSelect();
-
+        listeners.mapHover();
         //gets data and calls modal window
         $(".potato").on("click",function(event){
             var modal_data = {};
@@ -148,7 +148,19 @@ let mainLoad = function() {
 let mickeyBack = function() {
     $('.mickey').click(() => {
         mainLoad();
+        $(document.body).css("background-color", "white");
+         $("#mk").removeClass("hide");
+         $("#toonImg img").addClass('hide');
+         $("#advImg img").addClass('hide');
+         $("#froImg img").addClass('hide');
+         $("#cinImg img").addClass('hide');
+         $("#tomImg img").addClass('hide');
+         $("#libImg img").addClass('hide');
+         $("#mainImg img").addClass('hide');
+         $("#fantImg img").addClass('hide');
+
         $("#nav1").css("background-color", "rgba(225,225,225,.7)");
+
     });
 
     $("#menu-toggle").click(function(e) {

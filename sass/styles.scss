@@ -92,6 +92,7 @@ img {
 }
 
 
+
 /***************
 Image Map canvas
 ****************/
@@ -110,10 +111,18 @@ Image Map canvas
     z-index: 100;
 }
 
+
+.hover{
+	opacity: 0.6;
+}
+
+
+
 // Styles for time ticker
 #ticker {
 	width: 80%;
 	margin: 0 auto;
+
 }
 
 #timeNow, #inputValue{
@@ -129,7 +138,9 @@ Image Map canvas
 h2 {
 	font-family: 'Mouse Memoirs';
     text-align: center;
+
 }
+
 
 .eventList:hover {
     cursor: pointer;

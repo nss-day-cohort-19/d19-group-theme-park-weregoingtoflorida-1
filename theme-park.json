@@ -1,3 +1,4 @@
+
  {
     "park-info": [
         {
@@ -12,50 +13,56 @@
             ]
         }
     ],
-    "areas": [
-        {
-            "id": 1,
-            "name": "Main Street U.S.A.",
-            "description": "Main Street is a Disneyfied turn-of-the-20th-century small-town American thoroughfare. Its buildings are real, not elaborate props. Attention to detail is exceptional: Furnishings and fixtures are true to the period. Along the street are shops, character-greeting venues, eating places, City Hall, and a fire station. Occasionally, horse-drawn trolleys, fire engines, and horseless carriages transport visitors along Main Street to the Central Plaza.",
-            "colorTheme": "730217"
-        },
-        {
-            "id": 2,
-            "name": "Adventureland",
-            "description": "One of the two great things about the design of Adventureland is that it blends together so many different architecture styles. In the span of about one city block, you'll travel from the Victorian-era trappings of Swiss Family Treehouse and 1920's Jungle Cruise, past Middle Eastern bazaars and Polynesian tiki huts, to the colonial forts of the Spanish Main.",
-            "colorTheme": "D15530"
-        },
-        {
-            "id": 3,
-            "name": "Frontierland",
-            "decription": "It may be argued that Frontierland is the Magic Kingdom's best land. Themed to mimic the architecture of the American West, Frontierland includes two of the Magic Kingdom's headliner rides (Splash Mountain and Big Thunder Mountain), one of the Magic Kingdom's best spots to relax and unwind (Tom Sawyer Island), arguably the park's best counter service restaurant (Pecos Bill's Tall Tale Inn and Cafe) and some of the best spots for viewing the afternoon and evening parades.",
-            "colorTheme": "A37849"
-        },
-        {
-            "id": 4,
-            "name": "Liberty Square",
-            "decription": "Liberty Square re-creates America at the time of the American Revolution. The architecture is Federal or Colonial, and provides a seamless transition from the edge of Fantasyland to Frontierland. A real, 130-year-old live oak, the Liberty Tree, lends dignity and grace to the setting.",
-            "colorTheme": "2594D9"
-        },
-        {
-            "id": 5,
-            "name": "Fantasyland",
-            "decription": "Fantasyland the heart of the Magic Kingdom and a truly enchanting place spread gracefully like a miniature Alpine village beneath the steepled towers of Cinderella Castle is divided into three distinct sections. Directly behind Cinderella Castle and set upon a snowcapped mountain is Beast’s Castle, part of a Beauty and the Beast–themed area. The middle of Fantasyland holds the headliners, including Under the Sea - Journey of the Little Mermaid and Seven Dwarfs Mine Train. The placement of these two attractions allows good traffic flow either to the left (toward Beast’s Castle) for dining, to the right for attractions geared to smaller children, or back to the original part of Fantasyland for classic attractions such as Peter Pan’s Flight and The Many Adventures of Winnie the Pooh. The far-right corner of Fantasyland includes Dumbo the Flying Elephant, The Barnstormer featuring the Great Goofini, and the Walt Disney World Railroad - Fantasyland Station is called Storybook Circus as an homage to Disney’s Dumbo film.",
-            "colorTheme": "E73C81"
-        },
-        {
-            "id": 6,
-            "name": "Tomorrowland",
-            "decription": "Here in Tomorrowland, the future is today! So, ready your rockets, boys and girls, as you blast into the twin orbits of innovation and exploration. But Tomorrowland is more than a fascinating collection of gizmos — it's a spaceport where your imagination lands each day to glimpse otherworldly wonders, embark on fantastic voyages, and witness the pioneering of the human spirit.",
-            "colorTheme": "3E4D8C"
-        },
-        {
-            "id": 7,
-            "name": "Cinderlla Castle",
-            "description": "Rising high in the sky at the end of Main Street, U.S.A., Cinderella Castle welcomes you to a magical world of fantasy and fun. The central icon of Walt Disney World Resort, the castle invites all who visit to celebrate in a place where dreams come true.",
-            "colorTheme": "F2CF53"
-        }
-    ],
+  "areas" : [
+    {
+    "colorTheme" : "rgba(115,2,23,.7)",
+    "description" : "Main Street is a Disneyfied turn-of-the-20th-century small-town American thoroughfare. Its buildings are real, not elaborate props. Attention to detail is exceptional: Furnishings and fixtures are true to the period. Along the street are shops, character-greeting venues, eating places, City Hall, and a fire station. Occasionally, horse-drawn trolleys, fire engines, and horseless carriages transport visitors along Main Street to the Central Plaza.",
+    "id" : 1,
+    "name" : "Main Street U.S.A."
+  },
+  {
+    "colorTheme" : "rgba(209,85,48,.7)",
+    "description" : "One of the two great things about the design of Adventureland is that it blends together so many different architecture styles. In the span of about one city block, you'll travel from the Victorian-era trappings of Swiss Family Treehouse and 1920's Jungle Cruise, past Middle Eastern bazaars and Polynesian tiki huts, to the colonial forts of the Spanish Main.",
+    "id" : 2,
+    "name" : "Adventureland"
+  },
+  {
+    "colorTheme" : "rgba(163,120,73,.7)",
+    "decription" : "It may be argued that Frontierland is the Magic Kingdom's best land. Themed to mimic the architecture of the American West, Frontierland includes two of the Magic Kingdom's headliner rides (Splash Mountain and Big Thunder Mountain), one of the Magic Kingdom's best spots to relax and unwind (Tom Sawyer Island), arguably the park's best counter service restaurant (Pecos Bill's Tall Tale Inn and Cafe) and some of the best spots for viewing the afternoon and evening parades.",
+    "id" : 3,
+    "name" : "Frontierland"
+  },
+  {
+    "colorTheme" : "rgba(37,148,217,.7)",
+    "decription" : "Liberty Square re-creates America at the time of the American Revolution. The architecture is Federal or Colonial, and provides a seamless transition from the edge of Fantasyland to Frontierland. A real, 130-year-old live oak, the Liberty Tree, lends dignity and grace to the setting.",
+    "id" : 4,
+    "name" : "Liberty Square"
+  },
+  {
+    "colorTheme" : "rgba(231,60,129,.7)",
+    "decription" : "Fantasyland the heart of the Magic Kingdom and a truly enchanting place spread gracefully like a miniature Alpine village beneath the steepled towers of Cinderella Castle is divided into three distinct sections. Directly behind Cinderella Castle and set upon a snowcapped mountain is Beast’s Castle, part of a Beauty and the Beast–themed area. The middle of Fantasyland holds the headliners, including Under the Sea - Journey of the Little Mermaid and Seven Dwarfs Mine Train. The placement of these two attractions allows good traffic flow either to the left (toward Beast’s Castle) for dining, to the right for attractions geared to smaller children, or back to the original part of Fantasyland for classic attractions such as Peter Pan’s Flight and The Many Adventures of Winnie the Pooh. The far-right corner of Fantasyland includes Dumbo the Flying Elephant, The Barnstormer featuring the Great Goofini, and the Walt Disney World Railroad - Fantasyland Station is called Storybook Circus as an homage to Disney’s Dumbo film.",
+    "id" : 5,
+    "name" : "Fantasyland"
+  },
+  {
+    "colorTheme" : "rgba(62,77,140,.7)",
+    "decription" : "Here in Tomorrowland, the future is today! So, ready your rockets, boys and girls, as you blast into the twin orbits of innovation and exploration. But Tomorrowland is more than a fascinating collection of gizmos — it's a spaceport where your imagination lands each day to glimpse otherworldly wonders, embark on fantastic voyages, and witness the pioneering of the human spirit.",
+    "id" : 6,
+    "name" : "Tomorrowland"
+  },
+  {
+    "colorTheme" : "rgba(242,207,83,.7)",
+    "description" : "Rising high in the sky at the end of Main Street, U.S.A., Cinderella Castle welcomes you to a magical world of fantasy and fun. The central icon of Walt Disney World Resort, the castle invites all who visit to celebrate in a place where dreams come true.",
+    "id" : 7,
+    "name" : "Cinderlla's Castle"
+  },
+  {
+    "colorTheme" : "rgba(255,53,161,.7)",
+    "description" : "ToonTown is an interactive metropolis full of topsy turvy architecture and screwy sculptures! You can even visit the charming houses of Mickey, Minnie and other classic Disney characters. It's the place where some of your favorite Toons call home! Downtown is packed with surprises, such as the Police Phone where you can eavesdrop on Toontown's Finest. And check out the Fireworks Factory. Push the plunger for all kinds of explosive results! In Toon Square, every day is a city holiday. The Clockenspiel whistles, hammers and shrieks every half hour, and Goofy's Gas Station stands by to goof up your car most any time.",
+    "id" : 8,
+    "name" : "ToonTown"
+  }
+],
 "attractions": [
         {
             "id": 1,
@@ -1053,6 +1060,80 @@
             "area_id": 7,
             "x": 750,
             "y": 393
+        },
+        {
+            "area_id" : 8,
+            "description" : "Tumble, twist and turn on this gentle rollercoaster ride created by Gadget Hackwrench, that inventive mouse from the television show, Chip n' Dale's Rescue Rangers! She has scavenged spare parts from her garage to make a ride that travels around Toon Lake",
+            "id" : 132,
+            "name" : "Gadget's GoCoaster",
+            "type_id" : 1
+        },
+        {
+            "area_id" : 8,
+            "description" : "Hop on a toon cab and embark on a turbulent taxi ride through the streets of Toontown. When your tires hit some Dip in the road, they start to dissolve! Your taxi then spins wildly out of control — sometimes with your help as you twist the wheel. And the inanimate objects laugh hysterically at your plight.Continue on this crazy course until your cab hits the local power plant. Get ready for the ensuing audiovisual wack-stravaganza!",
+            "id" : 133,
+            "name" : "Roger Rabbit's Cartoon Spin",
+            "type_id" : 1
+        },
+        {
+            "area_id" : 8,
+            "description" : "Drop by this walk-up window for personal pizzas with your choice of cheese or pepperoni and cold beverages to wash ’em down. Get a soft drink-filled souvenir sipper cup for your little Daisy or Donald and sit outdoors by Toontown City Hall.",
+            "id" : 134,
+            "name" : "Daisy's Diner",
+            "type_id" : 2
+        },
+        {
+            "area_id" : 8,
+            "description" : "Grab a delicious hot dog here. They're barking good!",
+            "id" : 135,
+            "name" : "Pluto's Dog House",
+                "type_id" : 2
+        },
+        {
+            "area_id" : 8,
+            "description" : "The Gag Factory is easily seen in Toontown which its large laugh-o-meter above the entrance. This store carries small souvenirs such as plush characters, stationery and T-shirts. The merchandise in this shop is all Disney’s fab five (Mickey Mouse, Minnie Mouse, Pluto, Goofy and Donald) and their friends related. You will not find Princess souvenirs here in this Toontown shop. This store also has special Toontown architecture to look at while shopping.",
+            "id" : 136,
+            "name" : "Gag Factory",
+            "type_id" : 4
+        },
+        {
+            "area_id" : 8,
+            "description" : "Spend some time here for some fanciful Toon Merchandise",
+            "id" : 137,
+            "name" : "Toontown's Five and Dime",
+            "type_id" : 4
+        },
+        {
+            "area_id" : 8,
+            "description" : "Hang out with the coolest of all rabbits!",
+            "id" : 138,
+            "name" : "Meet Roger Rabbit",
+            "times" : [ "12:30PM" ],
+            "type_id" : 5
+        },
+        {
+            "area_id" : 8,
+            "description" : "We meet at the main clock and parade through Tooon Town",
+            "id" : 139,
+            "name" : "Goofy's Stroll Through Toon Town",
+            "times" : [ "2:00PM" ],
+            "type_id" : 8
+        },
+        {
+            "area_id" : 7,
+            "description" : "In the Magic Kingdom she is always at Princess Fairytale Hall. She can also be found at Cinderella's Royal Table.",
+            "id" : 140,
+            "name" : "Meet Cindarella",
+            "times" : [ "10:00AM" ],
+            "type_id" : 5
+        },
+        {
+            "area_id" : 7,
+            "description" : "The Fairy Godmother is the kind fairy that appears to Cinderella when she is in times of need and trouble. She is a little forgetful, and her spells don't last past midnight, but through her magic she enables Cinderella to go to the ball to achieve her dream. With a flick of her wand and a bibbidi boppidy boo, the Fairy Godmother is all that is pure and true.",
+            "id" : 141,
+            "name" : "Meet Fairy Godmother",
+            "times" : [ "10:30AM" ],
+            "type_id" : 5
         }
     ],
 "attraction_types":[
@@ -1089,4 +1170,5 @@
             "name": "special event"
         }
     ]
+
 }
