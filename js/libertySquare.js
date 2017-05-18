@@ -23,7 +23,6 @@ libertySquareObj.call = function(){
 };
 
 libertySquareObj.filterAttraction = function(data){
-    console.log("data", data);
     libertySquareObj.attraction = [];
     data.forEach(function(element) {
 

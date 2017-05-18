@@ -14,7 +14,6 @@ homePageObj.call = function(){
     promise.loadParkinfo()
     .then(data =>{
         titleData = data[0];
-        console.log("home page data", data);
         homePageObj.writeName();
     });
 };

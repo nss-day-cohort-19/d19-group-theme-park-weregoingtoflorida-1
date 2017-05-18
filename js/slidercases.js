@@ -1,8 +1,11 @@
 "use strict";
 
 let slider = {},
+
+    canvas = require("./canvas"),
     splash = require('./splash-page'),
     schedule = require('./schedule');
+
 
 slider.cases = () => {
     // slider stuff. Setting the slider variable.
@@ -16,13 +19,14 @@ slider.cases = () => {
                 url: "https://disney-94757.firebaseio.com/attractions/.json",
                 success: function(data){
                     splashObj.attraction = data;
+                    canvas.getCords(splashObj);
                     splashObj.attraction.forEach(function(element) {
                         if (element.times) {
                         splashEventTimes.push(element);
                         }
                     });
                         // Removing children so it doesn't append forever when I append stuff to the slider data.
-                    console.log("sliderEvents", $("#sliderEvents"));
+
                     while ($("#sliderEvents")[0].firstChild) {
                         $("#sliderEvents")[0].removeChild($("#sliderEvents")[0].firstChild);
                         // console.log("children removed");
@@ -52,9 +56,10 @@ slider.cases = () => {
                             var timesCheckTime = timesHour + ":" + timesMinute + timesM;
 
                             if (timesCheckTime === sliderTime){
-                                $("#sliderEvents").append(`<div class="eventList">${times}<br>${element.name}</div>`);
+                                $("#sliderEvents").append(` <a><div class="eventList event-name" value=${element.id}>${times}<br>${element.name}</div></a>`);
                             }
                         });
+
                     });
                 }
             });
