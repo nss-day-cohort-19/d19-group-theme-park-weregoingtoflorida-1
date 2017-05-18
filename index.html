@@ -1,90 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Magic Kingdom</title>
-    <link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Magic Kingdom</title>
+  <link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet">
 </head>
 <body>
-    <div id="wrapper">
 
-<!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <h2>
-                        Happening Now
-                        <br>
-                        <span class='smaller-text'>Click to Schedule</span>
-                    </h2>
-                </li>
-                <li>
-                    <div id="timeNow"></div>
-                </li>
-                <li>
-                    <div id="stickItHere"></div>
-                </li>
-                <li>
-                    <hr>
-                </li>
-                <li>
-                    <h2>
-                        Choose Your Time
-                    </h2>
-                </li>
-                <li>
-                    <div id="inputValue"></div>
-                </li>
-                <li>
-                    <input id="ticker" type="range" name="points" min="1" max="27" step="1" value="1">
+  <div id="wrapper">
 
-                </li>
-                <li>
-                    <div id="sliderEvents"></div>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <h2>
+                    Happening Now
+                    <br>
+                    <span class='smaller-text'>Click to Schedule</span>
+                </h2>
+            </li>
+            <li>
+                <div id="timeNow"></div>
+            </li>
+            <li>
+                <div id="stickItHere"></div>
+            </li>
+            <li>
+                <hr>
+            </li>
+            <li>
+                <h2>
+                    Choose Your Time
+                </h2>
+            </li>
+            <li>
+                <div id="inputValue"></div>
+            </li>
+            <li>
+                <input id="ticker" type="range" name="points" min="1" max="27" step="1" value="1">
 
-        <!-- Page Content -->
+            </li>
+            <li>
+                <div id="sliderEvents"></div>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
 
-  <div id="page-content-wrapper">
+    <!-- Page Content -->
 
-    <div class ="navbar navbar-default">
-      <a href="#" id="menu-toggle"><img src="images/clock-with-white-face.svg" id="clock"></a>
-      <button id="schedule" data-toggle="modal" data-target="#myModal">View My Schedule</button>
+    <div id="page-content-wrapper">
 
-      <h1 id="page-header"></h1>
+      <div id="nav1" class ="navbar navbar-default">
+        <div class="col-md-3" id="menu-toggle"><img src="images/clock-with-white-face.svg" id="clock"></div>
+        <button id="schedule" data-toggle="modal" data-target="#myModal">View My Schedule</button>
+        <h1 class="col-md-6" id="page-header"></h1>
+
 
         <!-- Single button -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-default dropdown-toggle float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Park Area<span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="areas" href="#">Adventureland</a></li>
-            <li><a class="areas" href="#">Fantasyland</a></li>
-            <li><a class="areas" href="#">Frontierland</a></li>
-            <li><a class="areas" href="#">Cinderella's Castle</a></li>
-            <li><a class="areas" href="#">Tomorrowland</a></li>
-            <li><a class="areas" href="#">Main St. USA</a></li>
-            <li><a class="areas" href="#">Liberty Square</a></li>
-          </ul>
+        <div class="btn-group col-md-3">
+          <div id="mickey-selectbtn">
+            <button id="select-park" type="button" class="btn btn-default dropdown-toggle float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Park Area<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="areas" href="#">Adventureland</a></li>
+              <li><a class="areas" href="#">Fantasyland</a></li>
+              <li><a class="areas" href="#">Frontierland</a></li>
+              <li><a class="areas" href="#">Cinderella's Castle</a></li>
+              <li><a class="areas" href="#">Tomorrowland</a></li>
+              <li><a class="areas" href="#">Main St. USA</a></li>
+              <li><a class="areas" href="#">Liberty Square</a></li>
+            </ul>
+            <div class="navbar-brand"><img src="images/mickey2.png" class="mickey"></div>
+          </div>
         </div>
-        <a class="navbar-brand" href="#"><img src="images/mickey2.png" class="mickey"></a>
-    </div> <!-- end navbar wrapper  -->
+      </div> <!-- end navbar wrapper  -->
 
+    <div id="page"></div>
 
-
-
-
-<div id="page"></div>
-
-
-
-</div>
-<!-- /#wrapper -->
+  </div>
+  <!-- / Page content -->
 
 <img src="images/mk4.png" id="mk" alt="map of disney" usemap="#Map" />
 <map name="Map" id="Map">

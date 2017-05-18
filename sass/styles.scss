@@ -1,5 +1,9 @@
 @import '_sidebar';
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 
+$background-color: rgba(131,233,247,.25);
+$nav-bgcolor: rgba(225,225,225,.7);
+$slabo: 'Slabo 27px', serif;
 
 @mixin mouseFont {
 	font-family: 'Mouse Memoirs', sans-serif;
@@ -8,16 +12,63 @@
 body{
 	font-family: 'Mouse Memoirs',
 	sans-serif;
+	background-color: $background-color;
 }
+
+body::after {
+  	content: "";
+  	background-image: url(../images/sparkles3.png);
+	background-repeat: repeat-x;
+  	opacity: 0.25;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  	position: absolute;
+  	z-index: -1;   
+}
+
 h1 {
 	@include mouseFont;
 	font-size: 6em;
+	display: inline-block;
+	text-align: center;
 }
 
-
+h2 {
+	font-family: 'Mouse Memoirs';
+    text-align: center;
+}
+// Positioning Header
+#select-park{
+	margin: 7px 0 0 5px;
+}
+.btn-group{
+	position: relative;
+	height: 124px;
+}
+#mickey-selectbtn{
+	position: absolute;
+  top: calc(50% - 25px);
+  left:40%;
+}
+.navbar-brand {
+	padding: 0;
+}
+.dropdown{
+	text-align: center;
+	font-size: 1.2em;
+	font-family: $slabo;
+}
+#nav1, #nav2{
+	background-color: $nav-bgcolor;
+}
+img {
+	vertical-align: initial;
+}
 .mickey{
-	max-width: 23px;
-	margin-left: -8px;
+	max-width: 50px;
+	display: inline-block;
 }
 
 .main-header {
@@ -26,16 +77,10 @@ h1 {
 
 #clock {
     height: 50px;
+    margin-top: 38px; //height of navbar minus 1/2 height of clock
 }
 
-#page-content-wrapper {
-    display: inline-block;
-}
 
-#ticker {
-	width: 80%;
-	margin: 0 auto;
-}
 
 .magic{
 	max-width:150px;
@@ -46,18 +91,19 @@ h1 {
 	margin-left: 90px;
 }
 
+// Styles for time ticker
+#ticker {
+	width: 80%;
+	margin: 0 auto;
+}
+
 #timeNow, #inputValue{
     font-family: 'Mouse Memoirs';
     text-align: center;
     font-size: 1.5em;
-    background-color: rgba(255, 255, 255, .7);
+    background-color: $nav-bgcolor;
     margin-bottom: 15px;
     border-radius: 15px;
-}
-
-h2 {
-	font-family: 'Mouse Memoirs';
-    text-align: center;
 }
 
 .eventList:hover {

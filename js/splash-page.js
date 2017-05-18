@@ -149,7 +149,7 @@ let mainLoad = function() {
 let mickeyBack = function() {
     $('.mickey').click(() => {
         mainLoad();
-        $(document.body).css("background-color", "white");
+        $("#nav1").css("background-color", "rgba(225,225,225,.7)");
     });
 
     $("#menu-toggle").click(function(e) {
