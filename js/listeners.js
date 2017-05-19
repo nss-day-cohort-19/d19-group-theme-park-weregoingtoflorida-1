@@ -157,7 +157,7 @@ var mapSelect = function() {
     });
 };
 
-function mapHover(){
+var mapHover = function(){
      $('#Map').on("mouseover",(event) => {
          console.log(event.target);
        switch (event.target.id) {
@@ -175,7 +175,7 @@ function mapHover(){
         break;
     }
     });
-}
+};
 
 module.exports = {areaSelector, dropDownEvents, mapSelect, mapHover};
 

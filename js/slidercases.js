@@ -19,7 +19,6 @@ slider.cases = () => {
                 url: "https://disney-94757.firebaseio.com/attractions/.json",
                 success: function(data){
                     splashObj.attraction = data;
-                    canvas.getCords(splashObj);
                     splashObj.attraction.forEach(function(element) {
                         if (element.times) {
                         splashEventTimes.push(element);
@@ -63,6 +62,7 @@ slider.cases = () => {
                         });
 
                     });
+                    canvas.getCords(splashObj);
                 }
             });
     };

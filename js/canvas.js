@@ -1,6 +1,7 @@
 "use strict";
 
 let canvasObj = {};
+let listener = require("./listeners.js");
 
 canvasObj.getCords = function(mstObj){
   $(".eventList").click(function(event){
@@ -15,11 +16,14 @@ canvasObj.getCords = function(mstObj){
         });
         console.log("target_id", event);
         canvasObj.heyGuys(xcord, ycord);
+      // listener.mapSelect();
   });
 };
 
+
+
 canvasObj.heyGuys = function(x, y){
-    console.log("hey guys!");
+    console.log("hey guys!", x, y);
 
     var canvas = document.getElementById('map-canvas');
     var canvasWidth = $("#mk").width();
@@ -36,12 +40,20 @@ canvasObj.heyGuys = function(x, y){
     context.beginPath();
       context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
       context.lineWidth = 1;
-      context.fillStyle = 'green';
+      context.fillStyle = 'orange';
       context.fill();
       context.strokeStyle = "pink";
       context.stroke();
 
+      setTimeout(function(){
+        canvas.setAttribute("width",0);
+        canvas.setAttribute("height", 0);
+        console.log("CLEAR");
+      }, 2000);
+
+
 };
+
 
 
 module.exports = canvasObj;

@@ -102,6 +102,10 @@ img {
 Image Map canvas
 ****************/
 
+#mk{
+    z-index: 100;
+}
+
 
 #map-wrapper{
     position: relative;
@@ -109,11 +113,15 @@ Image Map canvas
     left:0;
 }
 
+#Map{
+    z-index: 1;
+}
+
 
 #map-canvas{
 	position: absolute;
     top: 401;
-    z-index: 100;
+    z-index: 10;
 }
 
 
