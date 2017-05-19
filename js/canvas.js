@@ -29,17 +29,24 @@ canvasObj.heyGuys = function(x, y){
 
     var context = canvas.getContext('2d');
 
-    var centerX = x;
-    var centerY = y;
-    var radius = 25;
+    var img = $("<img>");
+    img.attr("src", "../images/youarehere.png");
+    console.log(img);
 
-    context.beginPath();
-      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-      context.lineWidth = 1;
-      context.fillStyle = 'green';
-      context.fill();
-      context.strokeStyle = "pink";
-      context.stroke();
+    context.drawImage("../images/youarehere.png", x, y);
+
+
+    // var centerX = x;
+    // var centerY = y;
+    // var radius = 25;
+
+    // context.beginPath();
+    //   context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+    //   context.lineWidth = 1;
+    //   context.fillStyle = 'green';
+    //   context.fill();
+    //   context.strokeStyle = "pink";
+    //   context.stroke();
 
 };
 
