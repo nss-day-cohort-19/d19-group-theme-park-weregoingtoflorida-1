@@ -52,7 +52,7 @@ slider.cases = () => {
                             var timesCheckTime = timesHour + ":" + timesMinute + timesM;
 
                             if (timesCheckTime === sliderTime){
-                                $("#sliderEvents").append(`<div class="eventList">${times}<br>${element.name}<br><button class="schedule-add btn-xs">Add to Schedule</button></div>`);
+                                $("#sliderEvents").append(`<div class="eventList"><div>${times}<br>${element.name}</div><br><button class="schedule-add btn-xs">Add to Schedule</button></div>`);
                             }
                         });
                     });
