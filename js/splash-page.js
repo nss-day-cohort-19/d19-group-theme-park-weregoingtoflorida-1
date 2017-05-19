@@ -131,7 +131,8 @@ let mainLoad = function() {
 
                 // appending our events beneath the clock.
                 if (timesCheckTime === checkTime){
-                    $("#sliderEvents").append(`<a><div class="eventList event-name" value=${element.id}><div>${times}<br>${element.name}</div></a><br><button class="schedule-add btn-xs">Add to Schedule</button></div>`);
+                console.log("log time", timesCheckTime, checkTime);
+                    $("#stickItHere").append(`<a><div class="eventList event-name" value=${element.id}><div>${times}<br>${element.name}</div></a><br><button class="schedule-add btn-xs">Add to Schedule</button></div>`);
                 }
             });
         });
