@@ -40,7 +40,7 @@ canvasObj.heyGuys = function(x, y){
     context.beginPath();
       context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
       context.lineWidth = 1;
-      context.fillStyle = 'green';
+      context.fillStyle = 'orange';
       context.fill();
       context.strokeStyle = "pink";
       context.stroke();
