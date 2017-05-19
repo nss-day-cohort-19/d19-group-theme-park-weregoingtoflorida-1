@@ -16,7 +16,7 @@ canvasObj.getCords = function(mstObj){
         });
         console.log("target_id", event);
         canvasObj.heyGuys(xcord, ycord);
-      listener.mapSelect();
+      // listener.mapSelect();
   });
 };
 
@@ -31,24 +31,17 @@ canvasObj.heyGuys = function(x, y){
 
     var context = canvas.getContext('2d');
 
-    var img = $("<img>");
-    img.attr("src", "../images/youarehere.png");
-    console.log(img);
+    var centerX = x;
+    var centerY = y;
+    var radius = 25;
 
-    context.drawImage("../images/youarehere.png", x, y);
-
-
-    // var centerX = x;
-    // var centerY = y;
-    // var radius = 25;
-
-    // context.beginPath();
-    //   context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-    //   context.lineWidth = 1;
-    //   context.fillStyle = 'green';
-    //   context.fill();
-    //   context.strokeStyle = "pink";
-    //   context.stroke();
+    context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.lineWidth = 1;
+      context.fillStyle = 'green';
+      context.fill();
+      context.strokeStyle = "pink";
+      context.stroke();
 
 
 };
