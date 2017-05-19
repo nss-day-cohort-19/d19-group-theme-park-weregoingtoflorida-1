@@ -30,7 +30,7 @@ var areaSelector = function(data) {
         adventureLand.changeImg();
         break;
         case 'Toon Town':
-        console.log("fantasy");
+        // console.log("fantasy");
         toonTown.call();
         dropDownEvents();
         colorChange.toonTown();
@@ -94,7 +94,7 @@ var dropDownEvents = function(){
 
 var mapSelect = function() {
 
-    console.log("listeners listening");
+    // console.log("listeners listening");
     $('#Map').on("click",(event) => {
        switch (event.target.id) {
         case 'adventure':
@@ -105,7 +105,7 @@ var mapSelect = function() {
         event.preventDefault();
         break;
         case 'toon':
-        console.log("fantasy");
+        // console.log("fantasy");
         toonTown.call();
         dropDownEvents();
         colorChange.toonTown();
@@ -159,18 +159,18 @@ var mapSelect = function() {
 
 var mapHover = function(){
      $('#Map').on("mouseover",(event) => {
-         console.log(event.target);
+         // console.log(event.target);
        switch (event.target.id) {
         case 'adventure':
-        console.log("Adventureland");
+        // console.log("Adventureland");
         adventureLand.hoverOver();
         break;
         case 'frontier':
-        console.log("frontierLand");
+        // console.log("frontierLand");
         adventureLand.hoverOver();
         break;
         case 'fantasy':
-        console.log("fantasyLand");
+        // console.log("fantasyLand");
         fantasyLand.hoverOver();
         break;
     }
