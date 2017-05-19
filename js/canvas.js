@@ -3,10 +3,10 @@
 let canvasObj = {};
 
 canvasObj.getCords = function(mstObj){
-  $(".event-name").click(function(event){
+  $(".eventList").click(function(event){
         var xcord = "";
         var ycord = "";
-        var target_id = event.target.lastChild.data;
+        var target_id = event.target.innerHTML;
         mstObj.attraction.forEach(function(element){
             if (element.name === target_id){
                 xcord = element.x;
