@@ -10,7 +10,7 @@ let schedule = require('./schedule');
 splash.mainLoad();
 splash.mickeyBack();
 
-// $(document.body).click(function(event){
-//     console.log(event);
-// });
+$(document.body).click(function(event){
+    console.log(event);
+});
 

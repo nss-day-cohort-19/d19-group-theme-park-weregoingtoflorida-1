@@ -20,8 +20,10 @@ canvasObj.getCords = function(mstObj){
   });
 };
 
+
+
 canvasObj.heyGuys = function(x, y){
-    console.log("hey guys!");
+    console.log("hey guys!", x, y);
 
     var canvas = document.getElementById('map-canvas');
     var canvasWidth = $("#mk").width();
@@ -43,8 +45,15 @@ canvasObj.heyGuys = function(x, y){
       context.strokeStyle = "pink";
       context.stroke();
 
+      setTimeout(function(){
+        canvas.setAttribute("width",0);
+        canvas.setAttribute("height", 0);
+        console.log("CLEAR");
+      }, 2000);
+
 
 };
+
 
 
 module.exports = canvasObj;
