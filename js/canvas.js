@@ -1,6 +1,7 @@
 "use strict";
 
 let canvasObj = {};
+let listener = require("./listeners.js");
 
 canvasObj.getCords = function(mstObj){
   $(".eventList").click(function(event){
@@ -15,6 +16,7 @@ canvasObj.getCords = function(mstObj){
         });
         console.log("target_id", event);
         canvasObj.heyGuys(xcord, ycord);
+      listener.mapSelect();
   });
 };
 
@@ -40,6 +42,7 @@ canvasObj.heyGuys = function(x, y){
       context.fill();
       context.strokeStyle = "pink";
       context.stroke();
+
 
 };
 
