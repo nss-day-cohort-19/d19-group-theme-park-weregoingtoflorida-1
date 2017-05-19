@@ -23,7 +23,6 @@ frontierLandObj.call = function(){
 };
 
 frontierLandObj.filterAttraction = function(data){
-    console.log("data", data);
     frontierLandObj.attraction = [];
     data.forEach(function(element) {
         if (element.area_id === 3) {

@@ -29,8 +29,21 @@ function viewSchedule() {
                 console.log(data);
             // $("#myModal").html();
             $("#myModal").html(modal(data));
+            $('.delete-schedule').click(deleteSchedule);
             }
         });
 }
+function deleteSchedule() {
+    console.log("delete worked");
+    $.ajax({
+                url: "https://disney-94757.firebaseio.com/schedule/.json",
+                type: "delete"
+            })
+            .done(function(response) {
+                console.log("response from Firebase:", response);
+                $('#schedule').trigger('click');
+            });
+}
+
 
 module.exports = {addToSchedule, viewSchedule};

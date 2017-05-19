@@ -23,7 +23,6 @@ cindysObj.call = function(){
 };
 
 cindysObj.filterAttraction = function(data){
-    console.log("data", data);
     cindysObj.attraction = [];
     data.forEach(function(element) {
         if (element.area_id === 7) {
