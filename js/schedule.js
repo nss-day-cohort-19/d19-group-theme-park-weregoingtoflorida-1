@@ -7,7 +7,7 @@ function addToSchedule(event) {
         let tempObj = {};
         console.log("click", $(event.target)[0].parentElement.innerText);
         let innerThings = $(event.target)[0].parentElement.innerText;
-        tempObj.time = innerThings.slice(0, 6);
+        tempObj.time = innerThings.slice(0, 7);
         tempObj.event = innerThings.slice(7, innerThings.length - 16);
         console.log("target", tempObj);
         $.ajax({
